@@ -16,7 +16,7 @@ bot.on('message', message => {
     }
   
     if (message.content.indexOf("Gakkyun") === 0) {
-    return message.channel.send("Yuppi :pika2:383925508683071498");
+    return message.channel.send("Yuppi <:pika2:383925508683071498>");
     }
   
 });
