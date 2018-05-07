@@ -3,7 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity(`Munching and Crunching`);
+  bot.user.setActivity(`Soba?`);
 });
 
 // Event to listen to messages sent to the server where the bot is located
