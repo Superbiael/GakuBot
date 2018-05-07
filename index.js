@@ -16,9 +16,13 @@ bot.on('message', message => {
     }
   
     if (message.content.indexOf("Gakkyun") === 0) {
-    return message.channel.send("Yuppi");
+    return message.channel.send("Yuppi.");
     }
-  
+
+    if (message.content.indexOf("Gaku, no") === 0) {
+    return message.channel.send("Gaku, yes.");
+    }
+
 });
 
 bot.on("message", async message => {
