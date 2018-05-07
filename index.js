@@ -19,9 +19,9 @@ bot.on('message', message => {
     return message.channel.send("Yuppi");
     }
   
-  if (message.content === "Pikachu") {
-    cont pika = client.emojis.find("pika2","pika");
-    message.reply(`${pika2} :3c`);
+  if(message.content === "pikachu") {
+  const ayy = client.emojis.find("name", "pika2");
+  message.reply(`${pika2} :3c`);
   }
 });
 
