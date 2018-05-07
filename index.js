@@ -18,6 +18,11 @@ bot.on('message', message => {
     if (message.content.indexOf("Gakkyun") === 0) {
     return message.channel.send("Yuppi");
     }
+  
+  if (message.content === "Pikachu") {
+    cont pika = client.emojis.find("pika2","pika");
+    message.reply(`${pika2} :3c`);
+  }
 });
 
 bot.on("message", async message => {
