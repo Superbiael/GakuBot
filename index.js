@@ -16,13 +16,9 @@ bot.on('message', message => {
     }
   
     if (message.content.indexOf("Gakkyun") === 0) {
-    return message.channel.send("Yuppi");
+    return message.channel.send("Yuppi :pika2:383925508683071498");
     }
   
-  if(message.content === "pikachu") {
-  const ayy = client.emojis.find("name", "pika2");
-  message.reply(`${pika2} :3c`);
-  }
 });
 
 bot.on("message", async message => {
