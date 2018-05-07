@@ -43,7 +43,7 @@ bot.on("message", async message => {
   }
 
   if(cmd === `${prefix}sobaman`){
-    return message.channel.send("You got the wrong person, I'm not as handsome as him");
+    return message.channel.send("You got the wrong person, I'm not as handsome as him.");
   }
   
   if(cmd === `${prefix}bathbomb`){
