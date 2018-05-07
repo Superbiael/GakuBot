@@ -11,10 +11,13 @@ bot.on('message', message => {
     // So the bot doesn't reply to iteself
     if (message.author.bot) return;
   
-      if (message.content.indexOf("Udon") === 0) {
+    if (message.content.indexOf("Udon") === 0) {
     return message.channel.send("In my soba household?");
     }
   
+    if (message.content.indexOf("Gakkyun") === 0) {
+    return message.channel.send("Yuppi");
+    }
 });
 
 bot.on("message", async message => {
