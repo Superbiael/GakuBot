@@ -11,7 +11,7 @@ bot.on('message', message => {
     // So the bot doesn't reply to iteself
     if (message.author.bot) return;
   
-      if (message.content.indexOf("Udon" "udon") === 0) {
+      if (message.content.indexOf("Udon") === 0) {
     return message.channel.send("In my soba household?");
     }
   
