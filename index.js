@@ -54,6 +54,10 @@ bot.on("message", async message => {
   if(cmd === `${prefix}bathbomb`){
     return message.channel.send("Finally, some good fucking food.");
   }
+  
+  if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
+    return message.channel.send("maf maf");
+  }
 });
 
 bot.login(process.env.token);
