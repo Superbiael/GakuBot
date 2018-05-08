@@ -23,7 +23,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setPresence({game:{name:'Satsujin love bot lol',type:0}});﻿
+  bot.user.setPresence({game:{name:'Ashley love bot lol',type:0}});﻿
 });
 
 
@@ -64,7 +64,7 @@ bot.on("message", async message => {
   let bicon = bot.user.displayAvatarURL;
   let botembed = new Discord.RichEmbed()
     .setDescription("Bot Information")
-    .setColor("#00ff67")
+    .setColor("#a0a0a0")
     .setThumbnail(bicon)
     .addField("Bot Name", bot.user.username)
 
