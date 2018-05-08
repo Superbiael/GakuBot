@@ -23,7 +23,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setPresence({game:{name:'Ashley love bot lol',type:0}});﻿
+  bot.user.setPresence({game:{name:'Ashley love bot',type:0}});﻿
 });
 
 
