@@ -58,6 +58,10 @@ bot.on("message", async message => {
   if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
     return message.channel.send("maf maf");
   }
+  
+  if(cmd === `${prefix}dab`){
+    return message.channel.send("//dabs away my worries while sitting in a Mercedes-Benz®");
+  }
 });
 
 bot.login(process.env.token);
