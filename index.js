@@ -32,17 +32,17 @@ bot.on('message', message => {
 
      msg = message.content.toLowerCase();
     
-    if (msg.startsWith("udon") === 0) {
+    if (msg.startsWith ("udon)) {
     return message.channel.send("In my soba household?");
-    }
+   }
   
-    if (msg.startsWith("gakkyun") === 0) {
+  if (msg.startsWith ("gakkyun")) {
     return message.channel.send("Yuppi.");
-    }
+  }
 
-    if (msg.startsWith("gaku, no") === 0) {
+  if (msg.startsWith ("gaku no")) {
     return message.channel.send("Gaku, yes.");
-    }
+  }
 
   
 });
