@@ -32,7 +32,7 @@ bot.on('message', message => {
 
      msg = message.content.toLowerCase();
     
-    if (msg.startsWith ("udon)) {
+    if (msg.startsWith ("udon")) {
     return message.channel.send("In my soba household?");
    }
   
