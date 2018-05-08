@@ -1,4 +1,3 @@
-
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
@@ -24,8 +23,9 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity(`Soba?`);
+  bot.user.setPresence({game:{name:'Ashley Love Bot,type:0}});﻿
 });
+
 
 // Event to listen to messages sent to the server where the bot is located
 bot.on('message', message => {
