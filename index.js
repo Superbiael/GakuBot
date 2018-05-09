@@ -78,12 +78,12 @@ bot.on("message", async message => {
     return message.channel.send("//dabs away my worries while sitting in a Mercedes-Benz®");
   }
   
-  if(cmd === `${prefix}test`){
-    let pkchRole = message.guild.roles.find("name, "Pikach");
+  if (command ==== "testing") {
+    let pkchRole = message.guild.roles.find("name", "Pikachu");
     if(message.member.role.has(pkchRole.id)) {
-    return message.channel.send("testing permissions");
+      message.channel.sendingMessage("Testing permissions");
     } else {
-    message.channel.reply("Foolish.");
+      message.channel.reply("Foolish");
     }
   }
   
