@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
 bot.commands = new Discord.Collection();
+const prefix = "g!";
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -23,7 +24,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setPresence({game:{name:'Ashley love bot',type:0}});﻿
+  bot.user.setPresence({game:{name:'Satsujin love bot',type:0}});﻿
 });
 
 
@@ -31,23 +32,33 @@ bot.on('message', message => {
   if (message.author.bot) return;
 
      msg = message.content.toLowerCase();
-    
-    if (msg.startsWith ("udon")) {
-    return message.channel.send("In my soba household?");
-   }
-  
+ 
+//     mention = message.mentions.users.first();
+
+//  if (msg.startsWith (prefix + "send")) {
+//     if (mention == null) { return; }
+//        message.delete();
+//        mentionMessage = message.content.slice(6);
+//        mention.sendMessage (mentionMessage);
+//        return message.channel.send ("Message sent.");
+//      }
+
   if (msg.startsWith ("gakkyun")) {
     return message.channel.send("Yuppi.");
   }
 
-  if (msg.startsWith ("gaku no")) {
-    return message.channel.send("Gaku, yes.");
+  if (msg.startsWith ("udon")) {
+    return message.channel.send("In my soba household?");
   }
 
-  if (msg.startsWith ("hey gays.")) {
-    return message.channel.send("What about me?");
+  if (msg.startsWith ("good morning gaku")) {
+    return message.channel.send("Good morning. You were talking in your sleep, weren't you?");
   }
 
+  if (msg.startsWith ("good night gaku")) {
+    return message.channel.send("Good night. Sleep well so I can see you early tomorrow.");
+  }
+  
 });
 
 bot.on("message", async message => {
@@ -73,31 +84,17 @@ bot.on("message", async message => {
 
   return message. channel.send(botembed);
   }
-  
-  if(cmd === `${prefix}dab`){
-    return message.channel.send("//dabs away my worries while sitting in a Mercedes-Benz®");
-  }
-  
-  if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
-    return message.channel.send("maf maf");
-  }
-  
+
   if(cmd === `${prefix}sobaman`){
     return message.channel.send("You got the wrong person, I'm not as handsome as him.");
   }
-  
-  if(cmd === `${prefix}bathbomb`){
-    return message.channel.send("Finally, some good fucking food.");
+
+  if(cmd === `${prefix}dab`){
+    return message.channel.send("//dabs away my worries while sitting in a Mercedes-Benz®");
   }
-  
-  
-    if(cmd === `${prefix}testing`){
-      let modRole = message.guild.roles.find("name","Pikachu");
-      if(message.member.roles.has(modRole.id)) {
-        message.channel.sendMessage("Works!");
-      } else {
-        message.reply("Foolish!");
-      }
+
+  if(cmd === `${prefix}bathbomb`){
+    return message.channel.send("Delicous. Finally, some good fucking good.");
   }
   
 });
