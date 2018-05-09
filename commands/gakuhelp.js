@@ -6,8 +6,8 @@ module.exports.run = async (bot,message, args) => {
   .addDescription("Do not include < > when using commands.")
   .setColor("#a0a0a0")
   .addField("g!commands:", "mafia (alias:maf) || sobaman || dab")
-  .addField("Other commands:", "udon || gakkyun || good morning gaku || good night gaku")
-  .addField("8ball command:","g!gaku <this isn't a command yet>")
+  .addField("Other commands:", "Udon || gakkyun || Good morning Gaku || Good night Gaku")
+  .addField("8ball command:","g!gaku <question> | I haven't added this command yet lol")
   .addField("Send DM:", "g!send <@user> <message> | Currently disabled ");
 
   message.channel.send(helpembed);
