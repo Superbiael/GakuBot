@@ -45,7 +45,7 @@ bot.on('message', message => {
       if(message.member.roles.has(modRole.id)) {
         message.channel.sendMessage("Gaku, yes!");
       } else {
-        message.reply("Foolish!");
+        message.cchannel.sendMessage("Foolish!");
       }
   }
 
