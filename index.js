@@ -89,6 +89,16 @@ bot.on("message", async message => {
   if(cmd === `${prefix}bathbomb`){
     return message.channel.send("Finally, some good fucking food.");
   }
+  
+    if(cmd === `${prefix}testing`){
+      let modRole = message.guild.roles.find("name","Pikachu");
+      if(message.member.roles.has(modRole.id)) {
+        message.channel.sendMessage("Works!");
+      } else {
+        message.reply("Foolish!");
+      }
+  }
+  
 });
 
 bot.login(process.env.token);
