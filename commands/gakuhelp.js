@@ -8,7 +8,7 @@ module.exports.run = async (bot,message, args) => {
   .addField("g!commands:", "mafia (alias:maf) || sobaman || dab ")
   .addField("Other commands:", "Udon || Good morning Gaku || Good night Gaku || Hey gays")
   .addField("8ball command:","g!gaku <question> | Disabled")
-  .addField("Send DM:", "g!send @user <message>");
+  .addField("Send DM:", "g!send @user <message> | Requires administrator permissions to delete command message after sending DM");
 
   message.channel.send(helpembed);
 }
