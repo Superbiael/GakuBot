@@ -41,12 +41,7 @@ bot.on('message', message => {
   }
 
   if (msg.startsWith ("gaku no")) {
-      let modRole = message.guild.roles.find("name","Testing");
-      if(message.member.roles.has(modRole.id)) {
-        message.channel.sendMessage("Gaku, yes!");
-      } else {
-        message.channel.sendMessage("Foolish!");
-      }
+    return message.channel.send("Gaku, yes.");
   }
 
   if (msg.startsWith ("hey gays.")) {
