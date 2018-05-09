@@ -23,8 +23,9 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online!`);
-  bot.user.setPresence({game:{name:'Satsujin love bot',type:0}});﻿
+  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+  bot.user.setActivity("Ashley love bot", {type:0});
+
 });
 
 
@@ -56,7 +57,7 @@ bot.on('message', message => {
   }
 
   if (msg.startsWith ("good night gaku")) {
-    return message.channel.send("Good night. Sleep well so I can see you early tomorrow.");
+    return message.channel.send("Good night. From now on, I want you to think of me.");
   }
   
   if (msg.startsWith ("gaku no")) {
