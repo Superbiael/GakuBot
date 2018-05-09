@@ -64,6 +64,9 @@ bot.on('message', message => {
     return message.channel.send("Gaku, yes.");
   }
 
+  if (msg.startsWith ("hey gays")) {
+    return message.channel.send("What about me?");
+  }
 });
 
 bot.on("message", async message => {
