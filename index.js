@@ -73,7 +73,16 @@ bot.on("message", async message => {
 
   return message. channel.send(botembed);
   }
-
+  
+    if(cmd === `${prefix}testing`){
+    let modRole = message.roles.find("name", "Pikachu");
+    if(message.member.role.has(modRole.id)) {
+      message.channel.sendingMessage("Testing permissions");
+    } else {
+      message.reply("Foolish");
+    }
+  }
+  
   if(cmd === `${prefix}dab`){
     return message.channel.send("//dabs away my worries while sitting in a Mercedes-Benz®");
   }
