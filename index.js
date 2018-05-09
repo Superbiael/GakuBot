@@ -41,7 +41,12 @@ bot.on('message', message => {
   }
 
   if (msg.startsWith ("gaku no")) {
-    return message.channel.send("Gaku, yes.");
+      let modRole = message.guild.roles.find("name","Testing");
+      if(message.member.roles.has(modRole.id)) {
+        message.channel.sendMessage("Gaku, yes!");
+      } else {
+        message.reply("Foolish!");
+      }
   }
 
   if (msg.startsWith ("hey gays.")) {
@@ -89,6 +94,7 @@ bot.on("message", async message => {
   if(cmd === `${prefix}bathbomb`){
     return message.channel.send("Finally, some good fucking food.");
   }
+  
   
     if(cmd === `${prefix}testing`){
       let modRole = message.guild.roles.find("name","Pikachu");
