@@ -79,8 +79,8 @@ bot.on("message", async message => {
   }
   
   if(cmd === `${prefix}testing`){
-    let pkchRole = message.guild.roles.find("name", "Pikachu");
-    if(message.member.role.has(pkchRole.id)) {
+    let modRole = message.guild.roles.find("name", "Pikachu");
+    if(message.member.role.has(modRole.id)) {
       message.channel.sendingMessage("Testing permissions");
     } else {
       message.reply("Foolish");
