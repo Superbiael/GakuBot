@@ -59,6 +59,10 @@ bot.on('message', message => {
     return message.channel.send("Good night. Sleep well so I can see you early tomorrow.");
   }
   
+  if (msg.startsWith ("gaku no")) {
+    return message.channel.send("Gaku, yes.");
+  }
+
 });
 
 bot.on("message", async message => {
