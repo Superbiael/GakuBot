@@ -83,7 +83,7 @@ bot.on("message", async message => {
     if(message.member.role.has(pkchRole.id)) {
       message.channel.sendingMessage("Testing permissions");
     } else {
-      message.channel.reply("Foolish");
+      message.reply("Foolish");
     }
   }
   
