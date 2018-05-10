@@ -40,7 +40,7 @@ bot.on('message', message => {
        if (mention == null) { return; }
         message.delete();
         mentionMessage = message.content.slice(6);
-        mention.sendMessage (mentionMessage);
+        mention.send (mentionMessage);
 //        return message.channel.send ("Message sent.");
       }
 
