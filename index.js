@@ -44,6 +44,15 @@ bot.on('message', message => {
 //        return message.channel.send ("Message sent.");
       }
 
+  if (msg.startsWith ("i love you gaku")) {
+      let modRole = message.guild.roles.find("name","A SOUTHERN GIRL.");
+      if(message.member.roles.has(modRole.id)) {
+        message.channel.send("I love you too, Ashley. I really mean it too, I wouldn't say it to anyone else.");
+      } else {
+        message.channel.send("Hey, don't say something like that out of nowhere!");
+      }
+  }
+  
   if (msg.startsWith ("gakkyun")) {
     return message.channel.send("Yuppi.");
   }
@@ -93,6 +102,10 @@ bot.on("message", async message => {
   return message. channel.send(botembed);
   }
 
+  if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
+    return message.channel.send("maf maf");
+  }
+  
   if(cmd === `${prefix}sobaman`){
     return message.channel.send("You got the wrong person, I'm not as handsome as him.");
   }
