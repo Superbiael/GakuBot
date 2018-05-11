@@ -49,9 +49,6 @@ bot.on('message', message => {
   }
 
   if (msg.includes ("udon")) {
-    let botschannel = message.guild.channels.find(`name`, "idolbot7");
-    if(!reportschannel) return message.channel.send("Couldn't find bot channel.");
-    botschannel.send(botEmbed);
     return message.channel.send("In my soba household?");
   }
 
