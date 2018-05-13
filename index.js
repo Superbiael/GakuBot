@@ -44,6 +44,36 @@ bot.on('message', message => {
 //        return message.channel.send ("Message sent.");
       }
 
+    if(msg.startsWith (prefix + "scout")) {
+      number = 19; 
+      var random = Math.floor (Math.random() * (number)) + 1;
+      switch (random) {
+//shout
+        case 1: message.channel.send ({files:["./images/gaku_birthday_sr.png"]}); break;
+        case 2: message.channel.send ({files:["./images/gaku_birthday_ssr.png"]}); break;
+        case 3: message.channel.send ({files:["./images/gaku_endofyear_sr.png"]}); break;
+        case 4: message.channel.send ({files:["./images/gaku_endofyear_ssr.png"]}); break;
+        case 5: message.channel.send ({files:["./images/gaku_gothichalloween_ssr.png"]}); break;
+        case 6: message.channel.send ({files:["./images/gaku_lasdim_ssr.png"]}); break;
+        case 7: message.channel.send ({files:["./images/gaku_linked_ssr.png"]}); break;
+        case 8: message.channel.send ({files:["./images/gaku_matsuri_ssr.png"]}); break;
+        case 9: message.channel.send ({files:["./images/gaku_newyear_ssr.png"]}); break;
+        case 10: message.channel.send ({files:["./images/gaku_rehearsal_r.png"]}); break;  
+        case 11: message.channel.send ({files:["./images/gaku_rehearsal_sr.png"]}); break;
+        case 12: message.channel.send ({files:["./images/gaku_rehearsal_ssr.png"]}); break;
+        case 13: message.channel.send ({files:["./images/gaku_rehearsal_ur.png"]}); break;
+        case 14: message.channel.send ({files:["./images/gaku_sweets_ssr.png"]}); break;
+        case 15: message.channel.send ({files:["./images/gaku_wishes_sr.png"]}); break;
+        case 16: message.channel.send ({files:["./images/gaku_wishes_ssr.png"]}); break;
+        case 17: message.channel.send ({files:["./images/gaku_work_sr.png"]}); break;
+        case 18: message.channel.send ({files:["./images/gaku_work_ssr.png"]}); break;
+        case 19: message.channel.send ({files:["./images/gaku_xmasmagic_ssr.png"]}); break;
+//beat
+//melody
+
+      }
+    }
+  
   if (msg.startsWith ("i love you gaku")) {
       let modRole = message.guild.roles.find("name","A SOUTHERN GIRL.");
       if(message.member.roles.has(modRole.id)) {
