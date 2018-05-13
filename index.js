@@ -45,7 +45,7 @@ bot.on('message', message => {
       }
 
     if(msg.startsWith (prefix + "scout")) {
-      number = 19; 
+      number = 38; 
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
 //shout
@@ -69,6 +69,25 @@ bot.on('message', message => {
         case 18: message.channel.send ({files:["./images/gaku_work_ssr.png"]}); break;
         case 19: message.channel.send ({files:["./images/gaku_xmasmagic_ssr.png"]}); break;
 //beat
+        case 20: message.channel.send ({files:["./images/gaku_academy_r.png"]}); break;
+        case 21: message.channel.send ({files:["./images/gaku_academy_sr.png"]}); break;
+        case 22: message.channel.send ({files:["./images/gaku_academy_ssr.png"]}); break;
+        case 23: message.channel.send ({files:["./images/gaku_blackside_ssr.png"]}); break;
+        case 24: message.channel.send ({files:["./images/gaku_daybreak_ssr.png"]}); break;
+        case 25: message.channel.send ({files:["./images/gaku_kingpudding_ssr.png"]}); break;
+        case 26: message.channel.send ({files:["./images/gaku_leopa_sr.png"]}); break;
+        case 27: message.channel.send ({files:["./images/gaku_leopa_ssr.png"]}); break;
+        case 28: message.channel.send ({files:["./images/gaku_marchen_ssr.png"]}); break;
+        case 29: message.channel.send ({files:["./images/gaku_order_ssr.png"]}); break;  
+        case 30: message.channel.send ({files:["./images/gaku_rabbit_sr.png"]}); break;
+        case 31: message.channel.send ({files:["./images/gaku_rabbit_ssr.png"]}); break;
+        case 32: message.channel.send ({files:["./images/gaku_valentine_ssr.png"]}); break;
+        case 33: message.channel.send ({files:["./images/gaku_valentinegreatescape_ssr.png"]}); break;
+        case 34: message.channel.send ({files:["./images/gaku_whitedaysp_sr.png"]}); break;
+        case 35: message.channel.send ({files:["./images/gaku_whitedaysp_ssr.png"]}); break;
+        case 36: message.channel.send ({files:["./images/gaku_winterwonderland_sr.png"]}); break;
+        case 37: message.channel.send ({files:["./images/gaku_winterwonderland_ssr.png"]}); break;
+        case 38: message.channel.send ({files:["./images/gaku_xmasrock_ssr.png"]}); break;
 //melody
 
       }
