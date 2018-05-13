@@ -169,6 +169,13 @@ bot.on("message", async message => {
   return message. channel.send(botembed);
   }
 
+     if(cmd === `${prefix}say`){
+  let botmessage = args.join(" ");
+  message.delete().catch();
+  message.channel.send(botmessage);
+}
+
+  
   if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
     return message.channel.send("maf maf");
   }
