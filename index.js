@@ -120,13 +120,12 @@ bot.on('message', message => {
       }
   }
   
-    if (msg.startsWith ("i hate you gaku")) {
-      return message.channel.send("Huh? Did I do something to make you mad at me?");
-    }
-
-  
-  if (msg.startsWith ("gakkyun")) {
+  if (msg.startsWith ("i hate you gaku")) {
     return message.channel.send("Yuppi.");
+  }
+
+  if (msg.startsWith ("gakkyun")) {
+    return message.channel.send("Huh? Did I do something to make you mad at me?");
   }
 
   if (msg.includes ("udon")) {
