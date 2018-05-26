@@ -112,12 +112,7 @@ bot.on('message', message => {
     }
   
   if (msg.startsWith ("i love you gaku")) {
-      let modRole = message.guild.roles.find("name","A SOUTHERN GIRL.");
-      if(message.member.roles.has(modRole.id)) {
-        message.channel.send("I love you too, Ashley. I really mean it too, I wouldn't say it to anyone else.");
-      } else {
-        message.channel.send("Hey, don't say something like that out of nowhere!");
-      }
+        message.channel.send("I love you too. I really mean it too, I wouldn't say it to anyone else.");
   }
   
   if (msg.startsWith ("i hate you gaku")) {
