@@ -109,6 +109,19 @@ bot.on('message', message => {
       }
     }
   
+    if(msg.startsWith (prefix + "quote")) {
+    number = 3;
+    var random = Math.floor (Math.random() * (number)) + 1;
+    switch (random) {
+      case 1: message.channel.send ("Yuki-san's good-looking and dainty. People's eyes are naturally drawn to him, and he's good at making an emotional impact. Compared to him, I'm not much of an actor at all..."); break;
+      case 2: message.channel.send ("So, first I think I'll try stealing your attention. \nIf I shine brighter than Re:vale or anyone else, I should be able to capture the attention of a young producer like you.\nJust you wait."); break;
+      case 3: message.channel.send ("You got the wrong person, I'm not as handsome as him."); break;
+      // case 4: message.channel.send (""); break;
+      // case 5: message.channel.send (""); break;
+      // case 6: message.channel.send (""); break;
+      // case 7: message.channel.send (""); break;
+   }
+ }
   if (msg.startsWith ("i love you gaku")) {
         message.channel.send("I love you too. I really mean it too, I wouldn't say it to anyone else.");
   }
@@ -154,17 +167,27 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
-  if(cmd ===`${prefix}botinfo`){
+  if(cmd ===`${prefix}help`){
+  let helpembed = new Discord.RichEmbed()
+    .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
+    .setColor("#a0a0a0")
+    .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**g!help** | Displays this help message")
+    .addField("Basic g!commands:", "mafia (alias:maf) || sobaman || dab || bothbomb")
+    .addField("Other commands:", "I love you Gaku  || I hate you Gaku || Udon || Good morning Gaku || Good night Gaku || Hey gays")
+    message.channel.send(helpembed);
+}
 
+  if(cmd ===`${prefix}botinfo`){
   let bicon = bot.user.displayAvatarURL;
   let botembed = new Discord.RichEmbed()
     .setDescription("Bot Information")
     .setColor("#a0a0a0")
     .setThumbnail(bicon)
-    .addField("Bot Name", bot.user.username)
-
+    .addField("Name:", bot.user.username)
+    .addField("Twitter:", "https://twitter.com/Superbiael")
   return message. channel.send(botembed);
   }
+
 
      if(cmd === `${prefix}say`){
   let botmessage = args.join(" ");
