@@ -45,10 +45,9 @@ bot.on('message', message => {
       }
 
     if(msg.startsWith (prefix + "scout")) {
-      number = 57; 
+      number = 58; 
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
-//shout
         case 1: message.channel.send ({files:["./images/gaku_birthday_sr.png"]}); break;
         case 2: message.channel.send ({files:["./images/gaku_birthday_ssr.png"]}); break;
         case 3: message.channel.send ({files:["./images/gaku_endofyear_sr.png"]}); break;
@@ -68,7 +67,6 @@ bot.on('message', message => {
         case 17: message.channel.send ({files:["./images/gaku_work_sr.png"]}); break;
         case 18: message.channel.send ({files:["./images/gaku_work_ssr.png"]}); break;
         case 19: message.channel.send ({files:["./images/gaku_xmasmagic_ssr.png"]}); break;
-//beat
         case 20: message.channel.send ({files:["./images/gaku_academy_r.png"]}); break;
         case 21: message.channel.send ({files:["./images/gaku_academy_sr.png"]}); break;
         case 22: message.channel.send ({files:["./images/gaku_academy_ssr.png"]}); break;
@@ -88,7 +86,6 @@ bot.on('message', message => {
         case 36: message.channel.send ({files:["./images/gaku_winterwonderland_sr.png"]}); break;
         case 37: message.channel.send ({files:["./images/gaku_winterwonderland_ssr.png"]}); break;
         case 38: message.channel.send ({files:["./images/gaku_xmasrock_ssr.png"]}); break;
-//melody
         case 39: message.channel.send ({files:["./images/gaku_christmas_ssr.png"]}); break;
         case 40: message.channel.send ({files:["./images/gaku_gardentea_ssr.png"]}); break;
         case 41: message.channel.send ({files:["./images/gaku_mlullaby_ssr.png"]}); break;
@@ -108,6 +105,7 @@ bot.on('message', message => {
         case 55: message.channel.send ({files:["./images/gaku_trgpolice_ssr.png"]}); break;
         case 56: message.channel.send ({files:["./images/gaku_whiteday_ssr.png"]}); break;
         case 57: message.channel.send ({files:["./images/gaku_zodiac_ssr.png"]}); break;
+        case 58: message.channel.send ({files:["./images/gaku_heavenlynut_ur.png.png"]}); break;
       }
     }
   
