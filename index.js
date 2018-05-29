@@ -168,11 +168,12 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
+  //Help Command 
   if(cmd ===`${prefix}help`){
   let helpembed = new Discord.RichEmbed()
     .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
     .setColor("#a0a0a0")
-    .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**y!say** *<message>* | Have the bot say anything you want\n**g!help** | Displays this help message")
+    .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**g!say** *<message>* | Have the bot say anything you want\n**g!help** | Displays this help message")
     .addField("Basic g!commands:", "mafia (alias:maf) || sobaman || dab || bothbomb")
     .addField("Other commands:", "I love you Gaku  || I hate you Gaku || Udon || Good morning Gaku || Good night Gaku || Hey gays")
     message.channel.send(helpembed);
