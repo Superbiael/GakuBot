@@ -189,13 +189,15 @@ bot.on("message", async message => {
   return message. channel.send(botembed);
   }
 
-
   if(cmd === `${prefix}say`){
   let botmessage = args.join(" ");
   message.delete().catch();
   message.channel.send(botmessage);
 }
 
+  if(cmd === `${prefix}smooch`){
+  return message.channel.send("I, uh, I didn't expect you to be bold like that. Here, let me show you how it's done.");
+}
   
   if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
     return message.channel.send("maf maf");
