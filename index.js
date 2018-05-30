@@ -110,14 +110,18 @@ bot.on('message', message => {
     }
   
   if(msg.startsWith (prefix + "quote")) {
-    number = 4;
+    number = 6;
     var random = Math.floor (Math.random() * (number)) + 1;
     switch (random) {
       case 1: message.channel.send ("Yuki-san's good-looking and dainty. People's eyes are naturally drawn to him, and he's good at making an emotional impact. Compared to him, I'm not much of an actor at all..."); break;
       case 2: message.channel.send ("So, first I think I'll try stealing your attention. \nIf I shine brighter than Re:vale or anyone else, I should be able to capture the attention of a young producer like you.\nJust you wait."); break;
       case 3: message.channel.send ("You got the wrong person, I'm not as handsome as him."); break;
       case 4: message.channel.send ("No one else is this handsome, are they?"); break;
-      // case 6: message.channel.send (""); break;
+      case 5: message.channel.send ("Tenn and Ryuu are my precious partners, so of course we're out to win"); break;
+      case 6: message.channel.send ("In other words, I guess he was trying to say my skin's so pale that even the decorations in the store stand out more? I don't think he's one to talk, though."); break;
+      // case 7: message.channel.send (""); break;
+      // case 7: message.channel.send (""); break;
+      // case 7: message.channel.send (""); break;
       // case 7: message.channel.send (""); break;
    }
  }
