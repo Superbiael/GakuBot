@@ -45,7 +45,7 @@ bot.on('message', message => {
       }
 
     if(msg.startsWith (prefix + "scout")) {
-      number = 58; 
+      number = 60; 
       var random = Math.floor (Math.random() * (number)) + 1;
       switch (random) {
         case 1: message.channel.send ({files:["./images/gaku_birthday_sr.png"]}); break;
@@ -106,6 +106,8 @@ bot.on('message', message => {
         case 56: message.channel.send ({files:["./images/gaku_whiteday_ssr.png"]}); break;
         case 57: message.channel.send ({files:["./images/gaku_zodiac_ssr.png"]}); break;
         case 58: message.channel.send ({files:["./images/gaku_heavenlynut_ur.png.png"]}); break;
+        case 59: message.channel.send ({files:["./images/gaky_visualartexpo_ssr.png"]}); break;
+        case 60: message.channel.send ({files:["./images/gaky_visualartexpo_ssr.png"]}); break;
       }
     }
   
@@ -119,10 +121,6 @@ bot.on('message', message => {
       case 4: message.channel.send ("No one else is this handsome, are they?"); break;
       case 5: message.channel.send ("Tenn and Ryuu are my precious partners, so of course we're out to win"); break;
       case 6: message.channel.send ("In other words, I guess he was trying to say my skin's so pale that even the decorations in the store stand out more? I don't think he's one to talk, though."); break;
-      // case 7: message.channel.send (""); break;
-      // case 7: message.channel.send (""); break;
-      // case 7: message.channel.send (""); break;
-      // case 7: message.channel.send (""); break;
    }
  }
   
