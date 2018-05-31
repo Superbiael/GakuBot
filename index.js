@@ -174,7 +174,7 @@ bot.on("message", async message => {
     .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
     .setColor("#a0a0a0")
     .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**g!say** *<message>* | Have the bot say anything you want\n**g!help** | Displays this help message")
-    .addField("Basic g!commands:", "mafia (alias:maf) || sobaman || dab || bothbomb")
+    .addField("Basic g!commands:", "mafia (alias:maf) || sobaman || dab || bathbomb")
     .addField("Other commands:", "I love you Gaku  || I hate you Gaku || Udon || Good morning Gaku || Good night Gaku || Hey gays")
     message.channel.send(helpembed);
 }
