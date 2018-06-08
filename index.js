@@ -19,21 +19,26 @@ fs.readdir("./commands/", (err, files) => {
     console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
   });
-
 });
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
   bot.user.setActivity("Haru like a fiddle", {type:0});
-
 });
-
 
 bot.on('message', message => {
   if (message.author.bot) return;
+  if(message.channel.type === "dm") return;
 
+  let prefix = 'g!';
+  let messageArray = message.content.split( " ");
+  let cmd = messageArray[0]
+  let args = messageArray.slice(1);
+
+  let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if(commandfile) commandfile.run(bot,message,args);
+  
      msg = message.content.toLowerCase();
- 
      mention = message.mentions.users.first();
 
   if (msg.startsWith (prefix + "send")) {
@@ -154,21 +159,7 @@ bot.on('message', message => {
   if (msg.startsWith ("hey gays")) {
     return message.channel.send("What about me?");
   }
-});
 
-bot.on("message", async message => {
-  if(message.author.box) return;
-  if(message.channel.type === "dm") return;
-
-  let prefix = 'g!';
-  let messageArray = message.content.split( " ");
-  let cmd = messageArray[0]
-  let args = messageArray.slice(1);
-
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
-
-  //Help Command 
   if(cmd ===`${prefix}help`){
   let helpembed = new Discord.RichEmbed()
     .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
