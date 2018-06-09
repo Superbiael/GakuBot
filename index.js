@@ -129,6 +129,11 @@ bot.on('message', message => {
    }
  }
   
+  if (msg.startsWith ("gaku do not interact")) {
+        message.channel.send("<:puddibutsad:454874546735153153>");
+  }
+
+
   if (msg.startsWith ("i love you gaku")) {
         message.channel.send("I love you too. I really mean it too, I wouldn't say it to anyone else.");
   }
