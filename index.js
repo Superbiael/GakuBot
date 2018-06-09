@@ -28,7 +28,7 @@ bot.on("ready", async () => {
 
 bot.on('message', message => {
   if (message.author.bot) return;
-  if(message.channel.type === "dm") return;
+//   if(message.channel.type === "dm") return;
 
   let prefix = 'g!';
   let messageArray = message.content.split( " ");
@@ -116,7 +116,7 @@ bot.on('message', message => {
     }
   
   if(msg.startsWith (prefix + "quote")) {
-    number = 6;
+    number = 7;
     var random = Math.floor (Math.random() * (number)) + 1;
     switch (random) {
       case 1: message.channel.send ("Yuki-san's good-looking and dainty. People's eyes are naturally drawn to him, and he's good at making an emotional impact. Compared to him, I'm not much of an actor at all..."); break;
@@ -125,6 +125,7 @@ bot.on('message', message => {
       case 4: message.channel.send ("No one else is this handsome, are they?"); break;
       case 5: message.channel.send ("Tenn and Ryuu are my precious partners, so of course we're out to win"); break;
       case 6: message.channel.send ("In other words, I guess he was trying to say my skin's so pale that even the decorations in the store stand out more? I don't think he's one to talk, though."); break;
+      case 7: message.channel.send ("I want to talk to you more. Is that a burden?"); break;
    }
  }
   
