@@ -116,7 +116,7 @@ bot.on('message', message => {
     }
   
   if(msg.startsWith (prefix + "quote")) {
-    number = 7;
+    number = 9;
     var random = Math.floor (Math.random() * (number)) + 1;
     switch (random) {
       case 1: message.channel.send ("Yuki-san's good-looking and dainty. People's eyes are naturally drawn to him, and he's good at making an emotional impact. Compared to him, I'm not much of an actor at all..."); break;
@@ -126,6 +126,8 @@ bot.on('message', message => {
       case 5: message.channel.send ("Tenn and Ryuu are my precious partners, so of course we're out to win"); break;
       case 6: message.channel.send ("In other words, I guess he was trying to say my skin's so pale that even the decorations in the store stand out more? I don't think he's one to talk, though."); break;
       case 7: message.channel.send ("I want to talk to you more. Is that a burden?"); break;
+      case 8: message.channel.send ("What I like about myself is everything.\nDon't get me wrong, I'm not narcissist. I just have a hard time dealing with self-hate, so I try to like myself as much as possible.\nNobody enjoys hating themselves, right?"); break;
+      case 9: message.channel.send ("I'm sure there's people out there who hate me, but I'll still make the effort to like myself."); break;
    }
  }
   
@@ -172,7 +174,7 @@ bot.on('message', message => {
     .setColor("#a0a0a0")
     .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**g!say** *<message>* | Have the bot say anything you want\n**g!help** | Displays this help message")
     .addField("Basic g!commands:", "mafia (alias:maf) || sobaman || dab || bathbomb")
-    .addField("Other commands:", "I love you Gaku  || I hate you Gaku || Udon || Good morning Gaku || Good night Gaku || Hey gays")
+    .addField("Other commands:", "I love you Gaku  || I hate you Gaku || Udon || Good morning Gaku || Good night Gaku || Hey gays || Gaku do not interact")
     message.channel.send(helpembed);
 }
 
