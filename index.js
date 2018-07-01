@@ -147,7 +147,11 @@ bot.on('message', message => {
   if (msg.includes ("udon")) {
     return botschannel.send("In my soba household?");
   }
-
+  
+  if (msg.startsWith ("gaku do not interact")) {
+    return botschannel.send("<:puddibutsad:454874546735153153>");
+  }
+  
   if (msg.startsWith ("good morning gaku")) {
     return botschannel.send("Good morning. You were talking in your sleep, weren't you?");
   }
