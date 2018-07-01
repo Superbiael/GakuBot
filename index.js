@@ -114,7 +114,7 @@ bot.on('message', message => {
           case 55: botschannel.send ({files:["./images/gaku_trgpolice_ssr.png"]}); break;
           case 56: botschannel.send ({files:["./images/gaku_whiteday_ssr.png"]}); break;
           case 57: botschannel.send ({files:["./images/gaku_zodiac_ssr.png"]}); break;
-         case 58: botschannel.send ({files:["./images/gaku_heavenlynut_ur.png.png"]}); break;
+         case 58: botschannel.send ({files:["./images/gaku_heavenlynut_ur.png"]}); break;
         }
       }
 
