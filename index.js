@@ -136,8 +136,8 @@ bot.on('message', message => {
        }
      }
 
-  if (msg.startsWith ("i love you gaku")) {
-        botschannel.send("I love you too. I really mean it too, I wouldn't say it to anyone else.");
+    if (msg.startsWith ("i love you gaku")) {
+        return botschannel.send("I love you too. I really mean it too, I wouldn't say it to anyone else.");
   }
 
     if (msg.startsWith ("i hate you gaku")) {
