@@ -187,7 +187,6 @@ bot.on('message', message => {
 }
 
   if(cmd ===`${prefix}botinfo`){
-
   let bicon = bot.user.displayAvatarURL;
   let botembed = new Discord.RichEmbed()
     .setDescription("Bot Information")
