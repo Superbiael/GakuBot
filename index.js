@@ -50,7 +50,6 @@ bot.on('message', message => {
         message.delete();
         mentionMessage = message.content.slice(6);
         mention.send (mentionMessage);
-//        return message.channel.send ("Message sent.");
       }
 
       if(msg.startsWith (prefix + "scout")) {
@@ -131,10 +130,19 @@ bot.on('message', message => {
           case 7: botschannel.send ("I want to talk to you more. Is that a burden?"); break;
           case 8: botschannel.send ("What I like about myself is everything.\nDon't get me wrong, I'm not narcissist. I just have a hard time dealing with self-hate, so I try to like myself as much as possible.\nNobody enjoys hating themselves, right?"); break;
           case 9: botschannel.send ("I'm sure there's people out there who hate me, but I'll still make the effort to like myself."); break;
-          // case 10: botschannel.send (""); break;
-          // case 11: botschannel.send (""); break;
        }
      }
+  
+       if(msg.startsWith (prefix + "cowboy")) {
+       number = 4;
+       var random = Math.floor (Math.random() * (number)) + 1;
+       switch (random) {
+         case 1: botschannel.send ("tfw they always ask yeehaw but never hawyee."); break;
+         case 2: botschannel.send ("Ya got the wrong fella, I ain't as handsome as 'im."); break;
+         case 3: botschannel.send ("Yeehaw 🤠"); break;
+         case 4: botschannel.send ("What in tarnation!"); break;
+      }
+    }
 
     if (msg.startsWith ("i love you gaku")) {
         return botschannel.send("I love you too. I really mean it too, I wouldn't say it to anyone else.");
@@ -173,7 +181,7 @@ bot.on('message', message => {
     .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
     .setColor("#a0a0a0")
     .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**g!say** *<message>* | Have the bot say anything you want\n**g!help** | Displays this help message")
-    .addField("Basic g!commands:", "mafia (alias:maf) || sobaman || dab || bothbomb || cat")
+    .addField("Basic g!commands:", "mafia (alias:maf) || sobaman || dab || bothbomb || cat || cowboy")
     .addField("Other commands:", "I love you Gaku  || I hate you Gaku || Udon || Good morning Gaku || Good night Gaku || Hey gays || Gaku do not interact")
     return botschannel.send(helpembed);
 }
