@@ -134,13 +134,14 @@ bot.on('message', message => {
      }
   
        if(msg.startsWith (prefix + "cowboy")) {
-       number = 4;
+       number = 5;
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
          case 1: botschannel.send ("tfw they always ask yeehaw but never hawyee."); break;
          case 2: botschannel.send ("Ya got the wrong fella, I ain't as handsome as 'im."); break;
          case 3: botschannel.send ("Yeehaw 🤠"); break;
          case 4: botschannel.send ("What in tarnation!"); break;
+         case 5: botschannel.send ("This is so sad. Can I get 1 whole yeehaw?"); break;
       }
     }
 
