@@ -197,7 +197,6 @@ bot.on('message', message => {
     .addField("Name:", bot.user.username)
     .addField("# of quotes:", "9")
     .addField("Scout:", "59 cards")
-    .addField("Twitter:", "https://twitter.com/Superbiael")
   return botschannel.send(botembed);
   }
 
