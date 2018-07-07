@@ -52,8 +52,8 @@ bot.on('message', message => {
         mention.send (mentionMessage);
       }
 
-      if(msg.startsWith (prefix + "scout")) {
-        number = 58;
+    if(msg.startsWith (prefix + "scout")) {
+        number = 59
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ({files:["./images/gaku_birthday_sr.png"]}); break;
@@ -113,7 +113,8 @@ bot.on('message', message => {
           case 55: botschannel.send ({files:["./images/gaku_trgpolice_ssr.png"]}); break;
           case 56: botschannel.send ({files:["./images/gaku_whiteday_ssr.png"]}); break;
           case 57: botschannel.send ({files:["./images/gaku_zodiac_ssr.png"]}); break;
-         case 58: botschannel.send ({files:["./images/gaku_heavenlynut_ur.png"]}); break;
+          case 58: botschannel.send ({files:["./images/gaku_heavenlynut_ur.png"]}); break;
+          case 59:  botschannel.send ({files:["./images/gaku_rti_ssr.png"]}); break;
         }
       }
 
@@ -181,7 +182,7 @@ bot.on('message', message => {
   let helpembed = new Discord.RichEmbed()
     .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
     .setColor("#a0a0a0")
-    .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**g!say** *<message>* | Have the bot say anything you want\n**g!help** | Displays this help message")
+    .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**g!say** *<message>* | Have the bot say anything you want\n**g!help** | Displays this help message \n**g!botinfo**")
     .addField("Basic g!commands:", "mafia (alias:maf) || sobaman || dab || bothbomb || cat || cowboy")
     .addField("Other commands:", "I love you Gaku  || I hate you Gaku || Udon || Good morning Gaku || Good night Gaku || Hey gays || Gaku do not interact")
     return botschannel.send(helpembed);
@@ -194,6 +195,8 @@ bot.on('message', message => {
     .setColor("#a0a0a0")
     .setThumbnail(bicon)
     .addField("Name:", bot.user.username)
+    .addField("# of quptes:", "9")
+    .addField("Scout:", "59 cards")
     .addField("Twitter:", "https://twitter.com/Superbiael")
   return botschannel.send(botembed);
   }
