@@ -51,9 +51,8 @@ bot.on('message', message => {
         mentionMessage = message.content.slice(6);
         mention.send (mentionMessage);
       }
-
     if(msg.startsWith (prefix + "scout")) {
-        number = 59
+        number = 60;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ({files:["./images/gaku_birthday_sr.png"]}); break;
@@ -115,6 +114,7 @@ bot.on('message', message => {
           case 57: botschannel.send ({files:["./images/gaku_zodiac_ssr.png"]}); break;
           case 58: botschannel.send ({files:["./images/gaku_heavenlynut_ur.png"]}); break;
           case 59:  botschannel.send ({files:["./images/gaku_rti_ssr.png"]}); break;
+          case 60:  botschannel.send ({files:["./images/gaku_diafus_ssr.png"]}); break;
         }
       }
 
@@ -196,7 +196,7 @@ bot.on('message', message => {
     .setThumbnail(bicon)
     .addField("Name:", bot.user.username)
     .addField("# of quotes:", "9")
-    .addField("Scout:", "59 cards")
+    .addField("Scout:", "60 cards")
   return botschannel.send(botembed);
   }
 
