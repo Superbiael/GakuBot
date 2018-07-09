@@ -194,7 +194,6 @@ bot.on('message', message => {
     .setDescription("Bot Information")
     .setColor("#a0a0a0")
     .setThumbnail(bicon)
-    .addField("Name:", bot.user.username)
     .addField("# of quotes:", "9")
     .addField("Scout:", "60 cards")
   return botschannel.send(botembed);
