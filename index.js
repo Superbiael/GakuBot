@@ -25,9 +25,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
   bot.user.setActivity("Score: -1", {type:0});
-
 });
-
 
 bot.on('message', message => {
   if (message.author.bot) return;
@@ -45,12 +43,13 @@ bot.on('message', message => {
     let botschannel = message.guild.channels.find(`name`, "idolbot7");
     if(!botschannel) return message.channel.send("Couldn't find bot (idolbot7) channel.");
 
-  if (msg.startsWith (prefix + "send")) {
+    if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
         message.delete();
         mentionMessage = message.content.slice(6);
         mention.send (mentionMessage);
       }
+
     if(msg.startsWith (prefix + "scout")) {
         number = 60;
         var random = Math.floor (Math.random() * (number)) + 1;
@@ -119,7 +118,7 @@ bot.on('message', message => {
       }
 
       if(msg.startsWith (prefix + "quote")) {
-        number = 9;
+        number = 14;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ("Yuki-san's good-looking and dainty. People's eyes are naturally drawn to him, and he's good at making an emotional impact. Compared to him, I'm not much of an actor at all..."); break;
@@ -131,37 +130,53 @@ bot.on('message', message => {
           case 7: botschannel.send ("I want to talk to you more. Is that a burden?"); break;
           case 8: botschannel.send ("What I like about myself is everything.\nDon't get me wrong, I'm not narcissist. I just have a hard time dealing with self-hate, so I try to like myself as much as possible.\nNobody enjoys hating themselves, right?"); break;
           case 9: botschannel.send ("I'm sure there's people out there who hate me, but I'll still make the effort to like myself."); break;
+          case 10: botschannel.send ("No matter how thick the fog that blocks the way is, this light will not disappear, nor will I let it. I'll clear everything that blocks the way and reach far and high."); break;
+          case 11: botschannel.send ("When are you free? Make some time, I'll take you to all your favorite places."); break;
+          case 12: botschannel.send ("I won't let you get bored, not even for an instant. I promise to give you the best day of your life. How about it? Sound good?"); break;
+          case 13: botschannel.send ("If it's Yuki-san, he can do it. Definitely. He's a great person. \nHe's a genius. Everyone knows about it, and he knows more than anyone else, right?"); break;
+          case 14: botschannel.send ("I've been working on my plans to drink with Yuki-san, but we hven't decided on a day yet.\nAppearntly he's got time on his schedule, but he's being all vague about it. He told me he should have the time, but not if he's late on their new song. \nWhen I tried getting him to at least eat dinner with me, he wouldn't be straight with me."); break;
        }
      }
-  
-       if(msg.startsWith (prefix + "cowboy")) {
-       number = 5;
+
+     if(cmd === `${prefix}cat`){
+       botschannel.send ({files:["./images/nya.png"]});
+     }
+
+     if(msg.startsWith (prefix + "cowboy")) {
+       number = 4;
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
          case 1: botschannel.send ("tfw they always ask yeehaw but never hawyee."); break;
          case 2: botschannel.send ("Ya got the wrong fella, I ain't as handsome as 'im."); break;
          case 3: botschannel.send ("Yeehaw 🤠"); break;
          case 4: botschannel.send ("What in tarnation!"); break;
-         case 5: botschannel.send ("This is so sad. Can I get 1 whole yeehaw?"); break;
       }
     }
 
-    if (msg.startsWith ("i love you gaku")) {
-        return botschannel.send("I love you too. I really mean it too, I wouldn't say it to anyone else.");
+     if (msg.startsWith ("gaku do not interact")) {
+        return botschannel.send("<:puddibutsad:454874546735153153>");
   }
+
+  if (msg.startsWith ("i love you gaku")) {
+      return botschannel.send("I love you too. I really mean it too, I wouldn't say it to anyone else.");
+}
 
     if (msg.startsWith ("i hate you gaku")) {
       return botschannel.send("Huh? Did I do something to make you mad at me?");
     }
 
+    if (msg.startsWith ("gakkyun")) {
+      return botschannel.send("Yuppi.");
+    }
+
+    if (msg.startsWith ("hey hetero")) {
+      return botschannel.send("I beg your pardon?");
+    }
+
   if (msg.includes ("udon")) {
     return botschannel.send("In my soba household?");
   }
-  
-  if (msg.startsWith ("gaku do not interact")) {
-    return botschannel.send("<:puddibutsad:454874546735153153>");
-  }
-  
+
   if (msg.startsWith ("good morning gaku")) {
     return botschannel.send("Good morning. You were talking in your sleep, weren't you?");
   }
@@ -182,9 +197,9 @@ bot.on('message', message => {
   let helpembed = new Discord.RichEmbed()
     .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
     .setColor("#a0a0a0")
-    .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**g!say** *<message>* | Have the bot say anything you want\n**g!help** | Displays this help message \n**g!botinfo**")
-    .addField("Basic g!commands:", "mafia (alias:maf) || sobaman || dab || bothbomb || cat || cowboy")
-    .addField("Other commands:", "I love you Gaku  || I hate you Gaku || Udon || Good morning Gaku || Good night Gaku || Hey gays || Gaku do not interact")
+    .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**g!say** *<message>* | Have the bot say anything you want\n**g!help** | Displays this help message")
+    .addField("Basic g!commands:", "mafia (alias:maf) || sobaman || dab || bathbomb || cat || cowboy")
+    .addField("Other commands:", "I love you Gaku  || I hate you Gaku || Udon || Good morning Gaku || Good night Gaku || Hey gays || Gaku do not interact || Hey Hetero")
     return botschannel.send(helpembed);
 }
 
@@ -194,19 +209,15 @@ bot.on('message', message => {
     .setDescription("Bot Information")
     .setColor("#a0a0a0")
     .setThumbnail(bicon)
-    .addField("# of quotes:", "9")
+    .addField("# of quotes:", "14")
     .addField("Scout:", "60 cards")
   return botschannel.send(botembed);
   }
 
-  if(cmd === `${prefix}cat`){
-    botschannel.send ({files:["./images/nya.png"]});
-  }
-  
   if(cmd === `${prefix}say`){
-  let botmessage = args.join(" ");
-  message.delete().catch();
-  botschannel.send(botmessage);
+    let botmessage = args.join(" ");
+    message.delete().catch();
+    botschannel.send(botmessage);
 }
 
   if(cmd === `${prefix}smooch`){
@@ -218,8 +229,16 @@ bot.on('message', message => {
   }
 
   if(cmd === `${prefix}sobaman`){
-    return botschannel.send("You got the wrong person, I'm not as handsome as him.");
+    number = 5;
+    var random = Math.floor (Math.random() * (number)) + 1;
+    switch (random) {
+    case 1: botschannel.send ("You got the wrong person, I'm not as handsome as him."); break;
+    case 2: botschannel.send ("Hello! It's soba yanamura!"); break;
+    case 3: botschannel.send ("Do you like Gaku Yaotome? \nI'm sure someone like you would be able to get Yaotome to fall for you."); break;
+    case 4: botschannel.send ("Thank you for your continued patronage."); break;
+    case 5: botschannel.send ("I won't let you be bored, not even for an instant.\nI, a plain old soba shop worker, promise to give you the best day of your life. How about it? Sound good?")
   }
+}
 
   if(cmd === `${prefix}dab`){
     return botschannel.send("//dabs away my worries while sitting in a Mercedes-Benz®");
