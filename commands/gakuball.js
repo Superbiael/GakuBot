@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
    let botschannel = message.guild.channels.find(`name`, "idolbot7");
    if(!botschannel) return message.channel.send("Couldn't find bot channel.");
-   message.channel.send(ballembed);
+   botschannel.send(ballembed);
 }
 
 module.exports.help = {
