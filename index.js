@@ -51,7 +51,7 @@ bot.on('message', message => {
       }
 
     if(msg.startsWith (prefix + "scout")) {
-        number = 60;
+        number = 61;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ({files:["./images/gaku_birthday_sr.png"]}); break;
@@ -112,8 +112,9 @@ bot.on('message', message => {
           case 56: botschannel.send ({files:["./images/gaku_whiteday_ssr.png"]}); break;
           case 57: botschannel.send ({files:["./images/gaku_zodiac_ssr.png"]}); break;
           case 58: botschannel.send ({files:["./images/gaku_heavenlynut_ur.png"]}); break;
-          case 59:  botschannel.send ({files:["./images/gaku_rti_ssr.png"]}); break;
-          case 60:  botschannel.send ({files:["./images/gaku_diafus_ssr.png"]}); break;
+          case 59: botschannel.send ({files:["./images/gaku_rti_ssr.png"]}); break;
+          case 60: botschannel.send ({files:["./images/gaku_diafus_ssr.png"]}); break;
+          case 61: botschannel.send ({files:["./images/gaku_12sg_ssr.png"]}); break;
         }
       }
 
@@ -210,7 +211,7 @@ bot.on('message', message => {
     .setColor("#a0a0a0")
     .setThumbnail(bicon)
     .addField("# of quotes:", "14")
-    .addField("Scout:", "60 cards")
+    .addField("Scout:", "61 cards")
   return botschannel.send(botembed);
   }
 
