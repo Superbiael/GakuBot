@@ -138,11 +138,7 @@ bot.on('message', message => {
           case 14: botschannel.send ("I've been working on my plans to drink with Yuki-san, but we hven't decided on a day yet.\nAppearntly he's got time on his schedule, but he's being all vague about it. He told me he should have the time, but not if he's late on their new song. \nWhen I tried getting him to at least eat dinner with me, he wouldn't be straight with me."); break;
        }
      }
-  
-     if(cmd === `${prefix}test`){
-      return message.channel.send ("<:puddibutsad:454874546735153153>");
-     }
-  
+
      if(cmd === `${prefix}cat`){
       return botschannel.send ({files:["./images/nya.png"]});
      }
