@@ -49,7 +49,7 @@ bot.on('message', message => {
         mentionMessage = message.content.slice(6);
         mention.send (mentionMessage);
       }
-
+  
     if(msg.startsWith (prefix + "scout")) {
         number = 61;
         var random = Math.floor (Math.random() * (number)) + 1;
@@ -139,6 +139,10 @@ bot.on('message', message => {
        }
      }
 
+     if(cmd === `${prefix}test`){
+       botschannel.send ("<:puddibutsad:454874546735153153>"); break;
+     }
+  
      if(cmd === `${prefix}cat`){
        botschannel.send ({files:["./images/nya.png"]});
      }
@@ -153,8 +157,8 @@ bot.on('message', message => {
          case 4: botschannel.send ("What in tarnation!"); break;
       }
     }
-
-     if (msg.startsWith ("gaku do not interact")) {
+  
+       if (msg.startsWith ("gaku do not interact")) {
         return botschannel.send("<:puddibutsad:454874546735153153>");
   }
 
