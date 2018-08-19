@@ -49,9 +49,9 @@ bot.on('message', message => {
         mentionMessage = message.content.slice(6);
         mention.send (mentionMessage);
       }
-  
+
     if(msg.startsWith (prefix + "scout")) {
-        number = 61;
+        number = 60;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ({files:["./images/gaku_birthday_sr.png"]}); break;
@@ -112,9 +112,8 @@ bot.on('message', message => {
           case 56: botschannel.send ({files:["./images/gaku_whiteday_ssr.png"]}); break;
           case 57: botschannel.send ({files:["./images/gaku_zodiac_ssr.png"]}); break;
           case 58: botschannel.send ({files:["./images/gaku_heavenlynut_ur.png"]}); break;
-          case 59: botschannel.send ({files:["./images/gaku_rti_ssr.png"]}); break;
-          case 60: botschannel.send ({files:["./images/gaku_diafus_ssr.png"]}); break;
-          case 61: botschannel.send ({files:["./images/gaku_12sg_ssr.png"]}); break;
+          case 59:  botschannel.send ({files:["./images/gaku_rti_ssr.png"]}); break;
+          case 60:  botschannel.send ({files:["./images/gaku_diafus_ssr.png"]}); break;
         }
       }
 
@@ -136,25 +135,33 @@ bot.on('message', message => {
           case 12: botschannel.send ("I won't let you get bored, not even for an instant. I promise to give you the best day of your life. How about it? Sound good?"); break;
           case 13: botschannel.send ("If it's Yuki-san, he can do it. Definitely. He's a great person. \nHe's a genius. Everyone knows about it, and he knows more than anyone else, right?"); break;
           case 14: botschannel.send ("I've been working on my plans to drink with Yuki-san, but we hven't decided on a day yet.\nAppearntly he's got time on his schedule, but he's being all vague about it. He told me he should have the time, but not if he's late on their new song. \nWhen I tried getting him to at least eat dinner with me, he wouldn't be straight with me."); break;
+          // case 15: botschannel.send (""); break;
+          // case 16: botschannel.send (""); break;
+          // case 17: botschannel.send (""); break;
+          // case 18: botschannel.send (""); break;
+          // case 19: botschannel.send (""); break;
+          // case 20: botschannel.send (""); break;
        }
      }
 
      if(cmd === `${prefix}cat`){
-      return botschannel.send ({files:["./images/nya.png"]});
+       botschannel.send ({files:["./images/nya.png"]});
      }
 
      if(msg.startsWith (prefix + "cowboy")) {
-       number = 4;
+       number = 6;
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
          case 1: botschannel.send ("tfw they always ask yeehaw but never hawyee."); break;
          case 2: botschannel.send ("Ya got the wrong fella, I ain't as handsome as 'im."); break;
          case 3: botschannel.send ("Yeehaw 🤠"); break;
          case 4: botschannel.send ("What in tarnation!"); break;
+         case 5: botschannel.send ("There's a snake in my boot!"); break;
+         case 6: botschannel.send ("They call me 12 guns Yaotome on the account of my 12 guns."); break;
       }
     }
-  
-       if (msg.startsWith ("gaku do not interact")) {
+
+     if (msg.startsWith ("gaku do not interact")) {
         return botschannel.send("<:puddibutsad:454874546735153153>");
   }
 
@@ -167,7 +174,7 @@ bot.on('message', message => {
     }
 
     if (msg.startsWith ("gakkyun")) {
-      return botschannel.send("Yuppi.");
+      return botschannel.send("Yuppi?");
     }
 
     if (msg.startsWith ("hey hetero")) {
@@ -211,7 +218,7 @@ bot.on('message', message => {
     .setColor("#a0a0a0")
     .setThumbnail(bicon)
     .addField("# of quotes:", "14")
-    .addField("Scout:", "61 cards")
+    .addField("Scout:", "60 cards")
   return botschannel.send(botembed);
   }
 
