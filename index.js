@@ -24,7 +24,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Score: -1", {type:0});
+  bot.user.setActivity("Associate", {type:"LISTENING"});
 });
 
 bot.on('message', message => {
@@ -118,7 +118,7 @@ bot.on('message', message => {
       }
 
       if(msg.startsWith (prefix + "quote")) {
-        number = 14;
+        number = 15;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ("Yuki-san's good-looking and dainty. People's eyes are naturally drawn to him, and he's good at making an emotional impact. Compared to him, I'm not much of an actor at all..."); break;
@@ -135,7 +135,7 @@ bot.on('message', message => {
           case 12: botschannel.send ("I won't let you get bored, not even for an instant. I promise to give you the best day of your life. How about it? Sound good?"); break;
           case 13: botschannel.send ("If it's Yuki-san, he can do it. Definitely. He's a great person. \nHe's a genius. Everyone knows about it, and he knows more than anyone else, right?"); break;
           case 14: botschannel.send ("I've been working on my plans to drink with Yuki-san, but we hven't decided on a day yet.\nAppearntly he's got time on his schedule, but he's being all vague about it. He told me he should have the time, but not if he's late on their new song. \nWhen I tried getting him to at least eat dinner with me, he wouldn't be straight with me."); break;
-          // case 15: botschannel.send (""); break;
+          case 15: botschannel.send ("This light will never fade. It'll drive away everything that blogs your path, to the ends of the Earth, high and far."); break;
           // case 16: botschannel.send (""); break;
           // case 17: botschannel.send (""); break;
           // case 18: botschannel.send (""); break;
@@ -149,7 +149,7 @@ bot.on('message', message => {
      }
 
      if(msg.startsWith (prefix + "cowboy")) {
-       number = 6;
+       number = 12;
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
          case 1: botschannel.send ("tfw they always ask yeehaw but never hawyee."); break;
@@ -158,6 +158,12 @@ bot.on('message', message => {
          case 4: botschannel.send ("What in tarnation!"); break;
          case 5: botschannel.send ("There's a snake in my boot!"); break;
          case 6: botschannel.send ("They call me 12 guns Yaotome on the account of my 12 guns."); break;
+         case 7: botschannel.send ("Ain’t nuthin’ like ridin’ a fine horse in new country."); break;
+         case 8: botschannel.send ("A true cowboy knows love, pain and shame but never cares about fame."); break;
+         case 9: botschannel.send ("Don't worry about bitin' off more'n you can chew; your mouth is probably a whole lot bigger'n you think"); break;
+         case 10: botschannel.send ("I took to the life of a cowboy like a horse takes to oats."); break;
+         case 11: botschannel.send ("First buy a cowboy hat and boots. Then you're on your way to being a Texan."); break;
+         case 12: botschannel.send ("No man should have cowboys boots in his wardrobe. That's fair enough, isn't it? Unless you're a cowboy, of course."); break;
       }
     }
 
@@ -217,7 +223,7 @@ bot.on('message', message => {
     .setDescription("Bot Information")
     .setColor("#a0a0a0")
     .setThumbnail(bicon)
-    .addField("# of quotes:", "14")
+    .addField("# of quotes:", "15")
     .addField("Scout:", "60 cards")
   return botschannel.send(botembed);
   }
