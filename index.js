@@ -112,8 +112,8 @@ bot.on('message', message => {
           case 56: botschannel.send ({files:["./images/gaku_whiteday_ssr.png"]}); break;
           case 57: botschannel.send ({files:["./images/gaku_zodiac_ssr.png"]}); break;
           case 58: botschannel.send ({files:["./images/gaku_heavenlynut_ur.png"]}); break;
-          case 59:  botschannel.send ({files:["./images/gaku_rti_ssr.png"]}); break;
-          case 60:  botschannel.send ({files:["./images/gaku_diafus_ssr.png"]}); break;
+          case 59: botschannel.send ({files:["./images/gaku_rti_ssr.png"]}); break;
+          case 60: botschannel.send ({files:["./images/gaku_diafus_ssr.png"]}); break;
         }
       }
 
@@ -145,11 +145,11 @@ bot.on('message', message => {
      }
 
      if(cmd === `${prefix}cat`){
-       botschannel.send ({files:["./images/nya.png"]});
+       return botschannel.send ({files:["./images/nya.png"]});
      }
 
-     if(msg.startsWith (prefix + "cowboy")) {
-       number = 12;
+   if(msg.startsWith (prefix + "cowboy")) {
+       number = 15;
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
          case 1: botschannel.send ("tfw they always ask yeehaw but never hawyee."); break;
@@ -164,22 +164,25 @@ bot.on('message', message => {
          case 10: botschannel.send ("I took to the life of a cowboy like a horse takes to oats."); break;
          case 11: botschannel.send ("First buy a cowboy hat and boots. Then you're on your way to being a Texan."); break;
          case 12: botschannel.send ("No man should have cowboys boots in his wardrobe. That's fair enough, isn't it? Unless you're a cowboy, of course."); break;
+         case 13: botschannel.send ("Giddy up, I’m right behind ya'"); break;
+         case 14: botschannel.send ("Well, we better head ’em up and move ’em out and get back to town. Pony up!"); break;
+         case 15: botschannel.send ("The best way to describe a cowboy Is mud, blood, guts, and glory."); break;
       }
     }
 
-     if (msg.startsWith ("gaku do not interact")) {
-        return botschannel.send("<:puddibutsad:454874546735153153>");
+  if (msg.startsWith ("gaku do not interact")) {
+      return botschannel.send("<:puddibutsad:454874546735153153>");
   }
 
   if (msg.startsWith ("i love you gaku")) {
       return botschannel.send("I love you too. I really mean it too, I wouldn't say it to anyone else.");
 }
 
-    if (msg.startsWith ("i hate you gaku")) {
+  if (msg.startsWith ("i hate you gaku")) {
       return botschannel.send("Huh? Did I do something to make you mad at me?");
     }
 
-    if (msg.startsWith ("gakkyun")) {
+  if (msg.startsWith ("gakkyun")) {
       return botschannel.send("Yuppi?");
     }
 
