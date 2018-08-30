@@ -119,7 +119,7 @@ bot.on('message', message => {
       }
 
       if(msg.startsWith (prefix + "quote")) {
-        number = 16;
+        number = 17;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ("Yuki-san's good-looking and dainty. People's eyes are naturally drawn to him, and he's good at making an emotional impact. Compared to him, I'm not much of an actor at all..."); break;
@@ -138,7 +138,7 @@ bot.on('message', message => {
           case 14: botschannel.send ("I've been working on my plans to drink with Yuki-san, but we hven't decided on a day yet.\nAppearntly he's got time on his schedule, but he's being all vague about it. He told me he should have the time, but not if he's late on their new song. \nWhen I tried getting him to at least eat dinner with me, he wouldn't be straight with me."); break;
           case 15: botschannel.send ("This light will never fade. It'll drive away everything that blogs your path, to the ends of the Earth, high and far."); break;
           case 16: botschannel.send ("As always thanks. I'm thankful you care about us. But, we won't lose!"); break;
-          // case 17: botschannel.send (""); break;
+          case 17: botschannel.send ("What's happen?"); break;
           // case 18: botschannel.send (""); break;
           // case 19: botschannel.send (""); break;
           // case 20: botschannel.send (""); break;
@@ -227,7 +227,7 @@ bot.on('message', message => {
     .setDescription("Bot Information")
     .setColor("#a0a0a0")
     .setThumbnail(bicon)
-    .addField("# of quotes:", "16")
+    .addField("# of quotes:", "17")
     .addField("Scout:", "61 cards")
   return botschannel.send(botembed);
   }
