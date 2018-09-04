@@ -128,6 +128,10 @@ bot.on('message', message => {
       return botschannel.send("I beg your pardon?");
     }
 
+    if (msg.startsWith ("then beg")) {
+      return botschannel.send ("What? No way.");
+    }
+  
     if (msg.includes ("udon")) {
     return botschannel.send("In my soba household?");
   }
