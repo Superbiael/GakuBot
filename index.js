@@ -57,7 +57,7 @@ bot.on('message', message => {
       }
 
       if(msg.startsWith (prefix + "quote")) {
-        number = 19;
+        number = 20;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ("Yuki-san's good-looking and dainty. People's eyes are naturally drawn to him, and he's good at making an emotional impact. Compared to him, I'm not much of an actor at all..."); break;
@@ -79,6 +79,7 @@ bot.on('message', message => {
           case 17: botschannel.send ("No matter what the future's like, I'll keep being a part of TRIGGER with Tenn and Ryuu."); break;
           case 18: botschannel.send ("What's happen?"); break;
           case 19: botschannel.send ("I don't trust Yuki with my Mercedes-Benz®..."); break;
+          case 20: botschannel.send ("Do you like braids that much? Just remember that I'm not a huge fan myself (lol)"); break;
        }
      }
 
@@ -131,7 +132,7 @@ bot.on('message', message => {
     if (msg.startsWith ("then beg")) {
       return botschannel.send ("What? No way.");
     }
-  
+
     if (msg.includes ("udon")) {
     return botschannel.send("In my soba household?");
   }
@@ -168,12 +169,12 @@ bot.on('message', message => {
       .setDescription("Bot Information")
       .setColor("#a0a0a0")
       .setThumbnail(bicon)
-      .addField("# of quotes:", "19")
+      .addField("# of quotes:", "20")
       .addField("Scout:", "61 cards")
     return botschannel.send(botembed);
   }
 
-    if(cmd === `${prefix}say`){
+  if(cmd === `${prefix}say`){
       let botmessage = args.join(" ");
       message.delete().catch();
       return botschannel.send(botmessage);
@@ -208,4 +209,5 @@ bot.on('message', message => {
   }
 
 });
+
 bot.login(process.env.token);
