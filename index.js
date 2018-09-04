@@ -50,13 +50,13 @@ bot.on('message', message => {
         return mention.send (mentionMessage);
       }
 
-      if (msg.startsWith (prefix + "scout")) {
+    if (msg.startsWith (prefix + "scout")) {
         number = 62;
         imageNumber = Math.floor (Math.random() * (number)) + 1;
         return botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
       }
 
-      if(msg.startsWith (prefix + "quote")) {
+    if(msg.startsWith (prefix + "quote")) {
         number = 20;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
@@ -77,7 +77,7 @@ bot.on('message', message => {
           case 15: botschannel.send ("This light will never fade. It'll drive away everything that blogs your path, to the ends of the Earth, high and far."); break;
           case 16: botschannel.send ("As always thanks. I'm thankful you care about us. But, we won't lose!"); break;
           case 17: botschannel.send ("No matter what the future's like, I'll keep being a part of TRIGGER with Tenn and Ryuu."); break;
-          case 18: botschannel.send ("What's happen?"); break;
+          case 18: botschannel.send ("*What's happen?*"); break;
           case 19: botschannel.send ("I don't trust Yuki with my Mercedes-Benz®..."); break;
           case 20: botschannel.send ("Do you like braids that much? Just remember that I'm not a huge fan myself (lol)"); break;
        }
@@ -114,12 +114,23 @@ bot.on('message', message => {
   }
 
     if (msg.startsWith ("i love you gaku")) {
-      return botschannel.send("I love you too. I really mean it too, I wouldn't say it to anyone else.");
-  }
+        number = 3;
+        var random = Math.floor (Math.random() * (number)) + 1;
+        switch (random) {
+          case 1: botschannel.send ("I love you too. I really mean it, I wouldn't say it to anyone else."); break;
+          case 2: botschannel.send ("Hey, what's with that? I'm starting to feel embarrassed...")
+          case 3: botschannel.send ("Hold up.\nIt's not fair if you suddenly come out and say something like that...\nI don't think my heart can handle this...")
+        }
+      }
 
     if (msg.startsWith ("i hate you gaku")) {
-      return botschannel.send("Huh? Did I do something to make you mad at me?");
+      number = 2;
+      var random = Math.floor (Math.random() * (number)) + 1;
+      switch (random) {
+      case 1: botschannel.send ("Huh? Did I do something to make you mad at me?"); break
+      case 2: botschannel.send ("That's harsh..."); break;
     }
+  }
 
     if (msg.startsWith ("gakkyun")) {
       return botschannel.send("Yuppi?");
