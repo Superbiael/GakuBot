@@ -118,8 +118,8 @@ bot.on('message', message => {
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ("I love you too. I really mean it, I wouldn't say it to anyone else."); break;
-          case 2: botschannel.send ("Hey, what's with that? I'm starting to feel embarrassed...")
-          case 3: botschannel.send ("Hold up.\nIt's not fair if you suddenly come out and say something like that...\nI don't think my heart can handle this...")
+          case 2: botschannel.send ("Hey, what's with that? I'm starting to feel embarrassed..."); break;
+          case 3: botschannel.send ("Hold up.\nIt's not fair if you suddenly come out and say something like that...\nI don't think my heart can handle this..."); break;
         }
       }
 
