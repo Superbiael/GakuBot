@@ -41,7 +41,7 @@ bot.on('message', message => {
     mention = message.mentions.users.first();
 
     let botschannel = message.guild.channels.find(`name`, "idolbot7");
-    if(!botschannel) return
+    if(!botschannel) return;
 
     if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
