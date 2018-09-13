@@ -40,8 +40,8 @@ bot.on('message', message => {
     msg = message.content.toLowerCase();
     mention = message.mentions.users.first();
 
-    let botschannel = message.guild.channels.find(`name`, "idolbot7");
-    if(!botschannel) return;
+    let botschannel = message.guild.channels.find(`name`, "bot-channel");
+    if(!botschannel) message.channel.send("Rename channel 'idolbot7' to 'bot-channel'");
 
     if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
