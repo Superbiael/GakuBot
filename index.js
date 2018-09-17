@@ -57,7 +57,7 @@ bot.on('message', message => {
       }
 
     if(msg.startsWith (prefix + "quote")) {
-        number = 20;
+        number = 21;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ("Yuki-san's good-looking and dainty. People's eyes are naturally drawn to him, and he's good at making an emotional impact. Compared to him, I'm not much of an actor at all..."); break;
@@ -80,6 +80,7 @@ bot.on('message', message => {
           case 18: botschannel.send ("*What's happen?*"); break;
           case 19: botschannel.send ("I don't trust Yuki with my Mercedes-Benz®..."); break;
           case 20: botschannel.send ("Do you like braids that much? Just remember that I'm not a huge fan myself (lol)"); break;
+          case 21: botschannel.send ("I know it might be weird to you if I say this, but it's like you've given meaning to why I was born."); break;
        }
      }
 
@@ -88,7 +89,7 @@ bot.on('message', message => {
      }
 
     if(msg.startsWith (prefix + "cowboy")) {
-       number = 15;
+       number = 16;
        var random = Math.floor (Math.random() * (number)) + 1;
        switch (random) {
          case 1: botschannel.send ("tfw they always ask yeehaw but never hawyee."); break;
@@ -106,6 +107,7 @@ bot.on('message', message => {
          case 13: botschannel.send ("Giddy up, I’m right behind ya'"); break;
          case 14: botschannel.send ("Well, we better head ’em up and move ’em out and get back to town. Pony up!"); break;
          case 15: botschannel.send ("The best way to describe a cowboy Is mud, blood, guts, and glory."); break;
+         case 16: botschannel.send ("You've yeed your last haw."); break;
       }
     }
 
