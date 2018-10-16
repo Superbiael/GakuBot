@@ -190,7 +190,7 @@ bot.on('message', message => {
   if(cmd === `${prefix}say`){
       let botmessage = args.join(" ");
       message.delete().catch();
-      return botschannel.send(botmessage);
+      return message.channel.send(botmessage);
 }
 
    if(msg.startsWith (prefix + "smooch")) {
