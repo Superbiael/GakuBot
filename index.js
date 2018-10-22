@@ -183,7 +183,7 @@ bot.on('message', message => {
       .setColor("#a0a0a0")
       .setThumbnail(bicon)
       .addField("# of quotes:", "21")
-      .addField("Scout:", "64 cards")
+      .addField("Scout:", "65 cards")
     return botschannel.send(botembed);
   }
 
