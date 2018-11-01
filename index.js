@@ -182,6 +182,8 @@ bot.on('message', message => {
       .setDescription("Bot Information")
       .setColor("#a0a0a0")
       .setThumbnail(bicon)
+      .addField("# of quotes:", "21")
+      .addField("Scout:", "68 cards")
     return botschannel.send(botembed);
   }
 
