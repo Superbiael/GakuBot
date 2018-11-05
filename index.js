@@ -114,6 +114,10 @@ bot.on('message', message => {
     if (msg.startsWith ("gaku do not interact")) {
       return botschannel.send("<:puddibutsad:454874546735153153>");
   }
+  
+      if (msg.startsWith ("rich people do not interact")) {
+      return botschannel.send("I'll pay you $100 if you let me interact.");
+  }
 
     if (msg.startsWith ("i love you gaku")) {
         number = 3;
