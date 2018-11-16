@@ -50,12 +50,17 @@ bot.on('message', message => {
         return mention.send (mentionMessage);
       }
 
-    if (msg.startsWith (prefix + "scout")) {
-        number = 68;
-        imageNumber = Math.floor (Math.random() * (number)) + 1;
-        return botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
-      }
+//     if (msg.startsWith (prefix + "scout")) {
+//         number = 69;
+//         imageNumber = Math.floor (Math.random() * (number)) + 1;
+//         return botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
+//       }
 
+    if(cmd === `${prefix}scout`){
+       return botschannel.send ({files:["./scout/69.png"]});
+     }
+
+  
     if(msg.startsWith (prefix + "quote")) {
         number = 21;
         var random = Math.floor (Math.random() * (number)) + 1;
