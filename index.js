@@ -50,17 +50,12 @@ bot.on('message', message => {
         return mention.send (mentionMessage);
       }
 
-//     if (msg.startsWith (prefix + "scout")) {
-//         number = 69;
-//         imageNumber = Math.floor (Math.random() * (number)) + 1;
-//         return botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
-//       }
+    if (msg.startsWith (prefix + "scout")) {
+        number = 69;
+        imageNumber = Math.floor (Math.random() * (number)) + 1;
+        return botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
+      }
 
-    if(cmd === `${prefix}scout`){
-       return botschannel.send ({files:["./scout/69.png"]});
-     }
-
-  
     if(msg.startsWith (prefix + "quote")) {
         number = 21;
         var random = Math.floor (Math.random() * (number)) + 1;
@@ -185,17 +180,6 @@ bot.on('message', message => {
     return botschannel.send(helpembed);
 }
 
-    if(cmd ===`${prefix}botinfo`){
-      let bicon = bot.user.displayAvatarURL;
-      let botembed = new Discord.RichEmbed()
-      .setDescription("Bot Information")
-      .setColor("#a0a0a0")
-      .setThumbnail(bicon)
-      .addField("# of quotes:", "21")
-      .addField("Scout:", "68 cards")
-    return botschannel.send(botembed);
-  }
-
   if(cmd === `${prefix}say`){
       let botmessage = args.join(" ");
       message.delete().catch();
@@ -211,7 +195,7 @@ bot.on('message', message => {
   }
 
   if(cmd === `${prefix}sobaman`){
-    number = 5;
+    number = 6;
     var random = Math.floor (Math.random() * (number)) + 1;
     switch (random) {
     case 1: botschannel.send ("You got the wrong person, I'm not as handsome as him."); break;
@@ -219,6 +203,7 @@ bot.on('message', message => {
     case 3: botschannel.send ("Do you like Gaku Yaotome? \nI'm sure someone like you would be able to get Yaotome to fall for you."); break;
     case 4: botschannel.send ("Thank you for your continued patronage."); break;
     case 5: botschannel.send ("I won't let you be bored, not even for an instant.\nI, a plain old soba shop worker, promise to give you the best day of your life. How about it? Sound good?")
+    case 6: botschannel.send ("Soba?"); break;
   }
 }
 
