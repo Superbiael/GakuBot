@@ -57,7 +57,7 @@ bot.on('message', message => {
       }
 
     if(msg.startsWith (prefix + "quote")) {
-        number = 21;
+        number = 25;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ("Yuki-san's good-looking and dainty. People's eyes are naturally drawn to him, and he's good at making an emotional impact. Compared to him, I'm not much of an actor at all..."); break;
@@ -81,6 +81,10 @@ bot.on('message', message => {
           case 19: botschannel.send ("I don't trust Yuki with my Mercedes-Benz®..."); break;
           case 20: botschannel.send ("Do you like braids that much? Just remember that I'm not a huge fan myself (lol)"); break;
           case 21: botschannel.send ("I know it might be weird to you if I say this, but it's like you've given meaning to why I was born."); break;
+          case 22: botschannel.send ("If I'm gonna be a man, then I want to be a cool man. As ambitious as this sounds I want to be able to protect not only TRIGGER or IDOLiSH7, bur Re:vale, too."); break;
+          case 23: botschannel.send ("I want to eat noodles when they're at their best.\nThat's why I wnat to cook them right down to the exact second. The real battle begins when the kitchen timer rings.\nI immediately have to power out the boiling water, add the broth, and finish it up with toppings. Even a couple of extra hands aren't enough to do that."); break;
+          case 24: botschannel.send ("When we debuted, I was more focused on keeping my old man satisfied than I was on enjoying my work.\nBut while standing on stage, spending time with my friends and fans, I learned to have fun doing it too. Now it's something I can't live without. It's the best job ever, one that really lets me feel like myself."); break;
+          case 25: botschannel.send ("I'll never quit TRIGGER, or being an idol. No matter who tells me to. \nI want to keep trying until I'm at my limit, no, even past my limits.\nWith this life, and with TRIGGER."); break;
        }
      }
 
@@ -114,18 +118,20 @@ bot.on('message', message => {
     if (msg.startsWith ("gaku do not interact")) {
       return botschannel.send("<:puddibutsad:454874546735153153>");
   }
-  
-      if (msg.startsWith ("rich people do not interact")) {
-      return botschannel.send("I'll pay you $100 if you let me interact.");
-  }
+
+  if (msg.startsWith ("rich people do not interact")) {
+  return botschannel.send("I'll pay you $100 if you let me interact.");
+}
 
     if (msg.startsWith ("i love you gaku")) {
-        number = 3;
+        number = 5;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ("I love you too. I really mean it, I wouldn't say it to anyone else."); break;
           case 2: botschannel.send ("Hey, what's with that? I'm starting to feel embarrassed..."); break;
           case 3: botschannel.send ("Hold up.\nIt's not fair if you suddenly come out and say something like that...\nI don't think my heart can handle this..."); break;
+          case 4: botschannel.send ("This feels...\nkind of embarrassing..."); break;
+          case 5: botschannel.send ("Thanks, let's spend another awesome year together. I promise to take you to even greater heights. Just keep on following me!"); break;
         }
       }
 
@@ -150,24 +156,24 @@ bot.on('message', message => {
       return botschannel.send ("What? No way.");
     }
 
-    if (msg.includes ("udon")) {
-    return botschannel.send("In my soba household?");
+    if (msg.startsWith ("udon")) {
+      return botschannel.send("In my soba household?");
   }
 
     if (msg.startsWith ("good morning gaku")) {
-    return botschannel.send("Good morning. You were talking in your sleep, weren't you?");
+      return botschannel.send("Good morning. You were talking in your sleep, weren't you?");
   }
 
     if (msg.startsWith ("good night gaku")) {
-    return botschannel.send("Good night. From now on, I want you to think of me.");
+      return botschannel.send("Good night. From now on, I want you to think of me.");
   }
 
     if (msg.startsWith ("gaku no")) {
-    return botschannel.send("Gaku, yes.");
+      return botschannel.send("Gaku, yes.");
   }
 
     if (msg.startsWith ("hey gays")) {
-    return botschannel.send("What about me?");
+      return botschannel.send("What about me?");
   }
 
     if(cmd ===`${prefix}help`){
@@ -180,6 +186,17 @@ bot.on('message', message => {
     return botschannel.send(helpembed);
 }
 
+    if(cmd ===`${prefix}botinfo`){
+      let bicon = bot.user.displayAvatarURL;
+      let botembed = new Discord.RichEmbed()
+      .setDescription("Bot Information")
+      .setColor("#a0a0a0")
+      .setThumbnail(bicon)
+      .addField("# of quotes:", "21")
+      .addField("Scout:", "66 cards")
+    return botschannel.send(botembed);
+  }
+
   if(cmd === `${prefix}say`){
       let botmessage = args.join(" ");
       message.delete().catch();
@@ -187,7 +204,7 @@ bot.on('message', message => {
 }
 
    if(msg.startsWith (prefix + "smooch")) {
-     return botschannel.send("I, uh, I didn't expect you to be bold like that. Here, let me show you how it's done.");
+    return botschannel.send("I, uh, I didn't expect you to be bold like that. Here, let me show you how it's done.");
 }
 
   if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
@@ -195,7 +212,7 @@ bot.on('message', message => {
   }
 
   if(cmd === `${prefix}sobaman`){
-    number = 6;
+    number = 5;
     var random = Math.floor (Math.random() * (number)) + 1;
     switch (random) {
     case 1: botschannel.send ("You got the wrong person, I'm not as handsome as him."); break;
@@ -203,7 +220,6 @@ bot.on('message', message => {
     case 3: botschannel.send ("Do you like Gaku Yaotome? \nI'm sure someone like you would be able to get Yaotome to fall for you."); break;
     case 4: botschannel.send ("Thank you for your continued patronage."); break;
     case 5: botschannel.send ("I won't let you be bored, not even for an instant.\nI, a plain old soba shop worker, promise to give you the best day of your life. How about it? Sound good?")
-    case 6: botschannel.send ("Soba?"); break;
   }
 }
 
@@ -216,5 +232,4 @@ bot.on('message', message => {
   }
 
 });
-
 bot.login(process.env.token);
