@@ -50,15 +50,15 @@ bot.on('message', message => {
         return mention.send (mentionMessage);
       }
 
-//     if (msg.startsWith (prefix + "scout")) {
-//         number = 70;
-//         imageNumber = Math.floor (Math.random() * (number)) + 1;
-//         return botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
-//       }
+    if (msg.startsWith (prefix + "scout")) {
+        number = 70;
+        imageNumber = Math.floor (Math.random() * (number)) + 1;
+        return botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
+      }
   
-   if (msg.startsWith (prefix + "scout")) {
-    return botschannel.send ({files:["./scout/70.png"]});
-  }
+//    if (msg.startsWith (prefix + "scout")) {
+//     return botschannel.send ({files:["./scout/70.png"]});
+//   }
 
     if(msg.startsWith (prefix + "quote")) {
         number = 25;
