@@ -197,11 +197,11 @@ bot.on('message', message => {
     return botschannel.send(botembed);
   }
 
-  if(cmd === `${prefix}say`){
+   if (msg.startsWith (prefix + "say")) {
       let botmessage = args.join(" ");
       message.delete().catch();
       return message.channel.send(botmessage);
-}
+    }
 
    if(msg.startsWith (prefix + "smooch")) {
     return botschannel.send("I, uh, I didn't expect you to be bold like that. Here, let me show you how it's done.");
