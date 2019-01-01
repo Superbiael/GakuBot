@@ -148,10 +148,6 @@ bot.on('message', message => {
     }
   }
 
-    if (msg.startsWith ("gakkyun")) {
-      return botschannel.send("Yuppi?");
-    }
-
     if (msg.startsWith ("hey hetero")) {
       return botschannel.send("I beg your pardon?");
     }
