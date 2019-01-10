@@ -172,14 +172,13 @@ bot.on('message', message => {
       return botschannel.send("Gaku, yes.");
   }
 
-//     if (msg.startsWith ("hey gays")) {
-//       return botschannel.send("What about me?");
-//   }
-  
-  if (msg.startsWith ("And Yaotome.")) {
-     if(message.author.id != "529466823729479680") return;
+    if (msg.startsWith ("hey gays")) {
       return botschannel.send("What about me?");
   }
+  
+//   if (msg.startsWith ("And Yaotome.")) {
+//       return botschannel.send("What about me?");
+//   }
 
     if(cmd ===`${prefix}help`){
       let helpembed = new Discord.RichEmbed()
