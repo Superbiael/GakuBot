@@ -172,8 +172,13 @@ bot.on('message', message => {
       return botschannel.send("Gaku, yes.");
   }
 
-    if (msg.startsWith ("hey gays")) {
-      return botschannel.send("What about me?");
+//     if (msg.startsWith ("hey gays")) {
+//       return botschannel.send("What about me?");
+//   }
+  
+  if (msg.starsWith ("And Yaotome.")) {
+     if(message.author.id != "529466823729479680") return;
+    return botschannel.send"What about me?");
   }
 
     if(cmd ===`${prefix}help`){
