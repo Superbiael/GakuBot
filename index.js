@@ -178,7 +178,7 @@ bot.on('message', message => {
   
   if (msg.startsWith ("And Yaotome.")) {
      if(message.author.id != "529466823729479680") return;
-    return botschannel.send"What about me?");
+      return botschannel.send("What about me?");
   }
 
     if(cmd ===`${prefix}help`){
