@@ -52,7 +52,7 @@ bot.on('message', message => {
       }
 
       if (msg.startsWith (prefix + "scout")) {
-          number = 72;
+          number = 73;
           imageNumber = Math.floor (Math.random() * (number)) + 1;
           return botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
         }
@@ -225,7 +225,7 @@ bot.on('message', message => {
       .addField("SSRs:", "End of Year Live \nWork \nXmas Magic \nXmas Rock\nWishes \nRoad to Infinity | *alt: rti* \nPhotogenic Life | *alt: ugly* \nGothic Halloween\nRabbit Ears Parka\nWinter Wonderland Trip\nCyber Techno | *alt: vae*\nShiawase de Ite\nOrdinary Days\nMonster\nZodiac\nTea Party\nHoliday Collection",true)
       .addField("SSRs:", "Matsuri \nLast Dimension \nSweets \nDiamond Fusion \nGrand Extermination Operation + Secret \nValentine \nTrigger Academy\nLeopard Eyes | *alt: leopa*\nValentine Great Escape\nWhite Special Day\n12 Songs Gift\nLight Future\nChristmas\nAinana Roman\nTrigger Police | *alt: police*\nTaiko no Tatsujin | *alt: taiko*\nSwaying on the Manami Railway | *alt: bno*\n",true)
       .addField("Ichiban Kuji:", "Celestial Pilgrimage | *alt: hoshi*\nBlack Side\nMarchen Dream \nKing Pudding\nOrder Please\nHappy Sparkle Star | *alt: sparkle*\nMechanical Lullaby | *alt: m lullaby*\n",true)
-      .addField("URs:", "Heavenly Visitor \n Middle of Rehearsal\nOutdoor Live\nHappy New Year",true)
+      .addField("URs:", "Heavenly Visitor \n Middle of Rehearsal\nOutdoor Live\nHappy New Year\nMusic in Your Thoughts | *alt: Walker*",true)
       .addField("Others:", "Shuffle Talk \nShuffle Talk 2018 \n");
     return message.channel.send(urembed);
   }
@@ -235,6 +235,7 @@ bot.on('message', message => {
 bot.on("message", function(message) {
     msg = message.content.toLowerCase();
     let botschannel = message.guild.channels.find(`name`, "bot-channel");
+    // let botschannel = message.guild.channels.find(`name`, "test");
     if(!botschannel) return;
     if(!msg.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split();
@@ -256,6 +257,9 @@ bot.on("message", function(message) {
       case "happy new year":
         return botschannel.send ({files:['./images/borderless/happy_new_year.png']});
       break;
+      case "music in your thoughts":
+      case "walker":
+        return botschannel.send ({files:['./images/borderless/walker.png']});
 // Ichiban Kuji Cards
       case "celestial pilgrimage":
       case "celestial":
