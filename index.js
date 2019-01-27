@@ -41,6 +41,7 @@ bot.on('message', message => {
     mention = message.mentions.users.first();
 
     let botschannel = message.guild.channels.find(`name`, "bot-channel");
+//     let botschannel = message.guild.channels.find(`name`, "test");
     if(!botschannel) return;
 
     if (msg.startsWith (prefix + "send")) {
@@ -221,7 +222,7 @@ bot.on('message', message => {
       .setThumbnail("https://cdn.discordapp.com/attachments/465053099846008832/538887420037300234/gaku-rti.png")
       .setDescription("Command: g!cardname")
       .setColor("#a0a0a0")
-      .addField("SSRs:", "End of Year Live \nWork \nXmas Magic \nXmas Rock\nWishes \nRoad to Infinity | *alt: rti* \nPhotogenic Life\nGothic Halloween\nRabbit Ears Parka\nWinter Wonderland Trip\nCyber Techno | *alt: vae*\nShiawase de Ite\nOrdinary Days\nMonster\nZodiac\nTea Party\nHoliday Collection",true)
+      .addField("SSRs:", "End of Year Live \nWork \nXmas Magic \nXmas Rock\nWishes \nRoad to Infinity | *alt: rti* \nPhotogenic Life | *alt: ugly* \nGothic Halloween\nRabbit Ears Parka\nWinter Wonderland Trip\nCyber Techno | *alt: vae*\nShiawase de Ite\nOrdinary Days\nMonster\nZodiac\nTea Party\nHoliday Collection",true)
       .addField("SSRs:", "Matsuri \nLast Dimension \nSweets \nDiamond Fusion \nGrand Extermination Operation + Secret \nValentine \nTrigger Academy\nLeopard Eyes | *alt: leopa*\nValentine Great Escape\nWhite Special Day\n12 Songs Gift\nLight Future\nChristmas\nAinana Roman\nTrigger Police | *alt: police*\nTaiko no Tatsujin | *alt: taiko*\nSwaying on the Manami Railway | *alt: bno*\n",true)
       .addField("Ichiban Kuji:", "Celestial Pilgrimage | *alt: hoshi*\nBlack Side\nMarchen Dream \nKing Pudding\nOrder Please\nHappy Sparkle Star | *alt: sparkle*\nMechanical Lullaby | *alt: m lullaby*\n",true)
       .addField("URs:", "Heavenly Visitor \n Middle of Rehearsal\nOutdoor Live\nHappy New Year",true)
