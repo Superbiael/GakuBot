@@ -153,7 +153,7 @@ bot.on('message', message => {
       return botschannel.send ("What? No way.");
     }
 
-    if (msg.startsWith ("udon")) {
+    if (msg.includes ("udon")) {
       return botschannel.send("In my soba household?");
   }
 
