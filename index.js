@@ -40,9 +40,9 @@ bot.on('message', message => {
     msg = message.content.toLowerCase();
     mention = message.mentions.users.first();
 
-    let botschannel = message.guild.channels.find(`name`, "bot-channel");
-//     let botschannel = message.guild.channels.find(`name`, "test");
-    if(!botschannel) return;
+//   Redirect to a specific channel
+   let botschannel = message.guild.channels.find(channel => channel.name === 'bot-channel');
+   if(!botschannel) return;
 
     if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
@@ -234,9 +234,8 @@ bot.on('message', message => {
 
 bot.on("message", function(message) {
     msg = message.content.toLowerCase();
-    let botschannel = message.guild.channels.find(`name`, "bot-channel");
-    // let botschannel = message.guild.channels.find(`name`, "test");
-    if(!botschannel) return;
+   let botschannel = message.guild.channels.find(channel => channel.name === 'bot-channel');
+   if(!botschannel) return;
     if(!msg.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split();
 
