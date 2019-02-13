@@ -223,7 +223,7 @@ bot.on("ready", async () => {
       .setDescription("Command: g!cardname")
       .setColor("#a0a0a0")
       .addField("SSRs:", "12 Songs Gift\nBirthday Photobook\nCyber Techno | alt: vae\nEnd of Year Live\nGrand Extermination Operation + Secret\nLast Dimension\nLight Future\nMonster\nOrdinary Days\nRabbit Ears Parka\nShiawase de ite\nSweets\nTea Party\nTrigger Police\nValentine Great Escape | alt: vge\nWinter Wonderland Trip\nWhite Day\nWork\nXmas Rock",true)
-      .addField("SSRs:", "Ainana Roman\nChristmas\nDaybreak Interlude\nGothic Halloween\nHoliday Gift Collection\nLeopard Eyes | alt: leopa\nMATSURI\nNew Year\nPhotogenic Life\nRoad to Infinity\nSwaying on the Manami Railway | alt: bno\nTaiko no Tatsujin | alt: taiko\nTrigger Academy\nValentine\nWhite Special Day | alt: white sp\nWishes\nXmas Magic\nZodiac",true)
+      .addField("SSRs:", "Ainana Roman\nChristmas\nDaybreak Interlude\nGothic Halloween\nHoliday Gift Collection\nLeopard Eyes | alt: leopa\nMATSURI\nNew Year\nPhotogenic Life\nRoad to Infinity\nSwaying on the Manami Railway | alt: bno\nTaiko no Tatsujin | alt: taiko\nTrigger Academy\nValentine\nValentine Live\nWhite Special Day | alt: white sp\nWishes\nXmas Magic\nZodiac",true)
       .addField("Ichiban Kuji:", "Black Side\nCelestial Pilgrimage | alt: hoshi\nHappy Sparkle Star | alt: sparkle\nKing Pudding\nMarchen Dream\nOrder Please",true)
       .addField("URs:", "Happy New Year\nHeavenly Visitor\nMusic in your Thoughts | alt: walker\nOutdoor Live\n Middle of Rehearsal",true)
       .addField("Others:", "Shuffle Talk \nShuffle Talk 2018 \n",true);
@@ -431,6 +431,9 @@ bot.on("message", function(message) {
       break;
       case "valentine":
         return botschannel.send ({files:['./images/borderless/ssr/valentine.png']});
+      break;
+      case "valentine live":
+        return botschannel.send ({files:['./images/borderless/ssr/valentine_live.png']});
       break;
       case "gothic halloween":
       case "gothic":
