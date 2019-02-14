@@ -41,7 +41,7 @@ bot.on("ready", async () => {
     mention = message.mentions.users.first();
 
     // Redirect to specific channel
-    let botschannel = message.guild.channel.find(channel => channel.name === 'bot-channel');
+    let botschannel = message.guild.channels.find(channel => channel.name === 'bot-channel');
     // let botschannel = message.guild.channel.find(channel => channel.name === 'test');
     if(!botschannel) return;
 
@@ -235,7 +235,7 @@ bot.on("ready", async () => {
 
 bot.on("message", function(message) {
     msg = message.content.toLowerCase();
-    let botschannel = message.guild.channel.find(channel => channel.name === 'bot-channel');
+    let botschannel = message.guild.channels.find(channel => channel.name === 'bot-channel');
     if(!botschannel) return;
     if(!msg.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split();
