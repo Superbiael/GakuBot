@@ -1,48 +1,30 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
-const fs = require("fs");
+const prefix = "3!";
 bot.commands = new Discord.Collection();
-const prefix = "g!";
 
-fs.readdir("./commands/", (err, files) => {
-
-  if(err) console.log(err);
-
-  let jsfile = files.filter(f => f.split(".").pop() === "js")
-  if(jsfile.legnth <= 0){
-    console.log("Couldn't find commands.");
-    return;
-  }
-
-  jsfile.forEach((f, i) =>{
-    let props = require(`./commands/${f}`);
-    console.log(`${f} loaded!`);
-    bot.commands.set(props.help.name, props);
+   bot.on("ready", async () => {
+   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+   bot.user.setActivity("Associate", {type:"LISTENING"});
   });
 
-});
+   bot.on('message', message => {
+   // if (message.author.bot) return;
+   if(message.channel.type === "dm") return;
 
-bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("三日月のヴェール", {type:"LISTENING"});
-});
+   let prefix = '3!';
+   let messageArray = message.content.split(" ");
+   let cmd = messageArray[0]
+   let args = messageArray.slice(1);
+   let commandfile = bot.commands.get(cmd.slice(prefix.length));
+   if(commandfile) commandfile.run(bot,message,args);
 
-   bot.on("message", async message => {
-    // if (message.author.bot) return;
-    if(message.channel.type === "dm") return;
-    let prefix = 'g!';
-    let messageArray = message.content.split(" ");
-    let cmd = messageArray[0];
-    let args = messageArray.slice(1);
-    let commandfile = bot.commands.get(cmd.slice(prefix.length));
-    if(commandfile) commandfile.run(bot,message,args);
+   msg = message.content.toLowerCase();
+   mention = message.mentions.users.first();
 
-    msg = message.content.toLowerCase();
-    mention = message.mentions.users.first();
-
-    // Redirect to specific channel
+//   Redirect to a specific channel
    let botschannel = message.guild.channels.find(channel => channel.name === 'bot-channel');
-    if(!botschannel) return;
+   if(!botschannel) return;
 
    if (msg.startsWith (prefix + "send")) {
      if (mention == null) { return; }
