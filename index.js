@@ -5,8 +5,8 @@ bot.commands = new Discord.Collection();
 
    bot.on("ready", async () => {
    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-   // bot.user.setActivity("Associate", {type:"LISTENING"});
-    bot.user.setActivity("三日月のヴェール | 8!help", {type:"LISTENING"});
+   bot.user.setActivity("Associate | 8!help", {type:"LISTENING"});
+//     bot.user.setActivity("三日月のヴェール | 8!help", {type:"LISTENING"});
   });
 
    bot.on("message", async message => {
@@ -187,7 +187,7 @@ bot.commands = new Discord.Collection();
       let helpembed = new Discord.RichEmbed()
       .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
       .setColor("#a0a0a0")
-      .addField("Commands:","**g!gaku** *<question>* | Ask him anything. \n**g!send** *<@user> <message>* | Send a DM to the mentioned user\n**g!scout** | Solo Yolo \n**g!quote** | Random quote\n**g!say** *<message>* | Have the bot say anything you want\n**g!cards** | List of cards ")
+      .addField("Commands:","**8!ask** *<question>* | Ask him anything. \n**8!send** *<@user> <message>* | Send a DM to the mentioned user\n**8!scout** | Solo Yolo \n**8!quote** | Random quote\n**8!say** *<message>* | Have the bot say anything you want\n**8!cards** | List of cards ")
       .addField("Basic g!commands:", "mafia (alias:maf) | sobaman | dab | bathbomb | cat | cowboy")
       .addField("Other commands:", "I love you Gaku  | I hate you Gaku | Udon | Good morning Gaku | Good night Gaku | Hey gays | Gaku do not interact | Hey Hetero")
     return message.channel.send(helpembed);
@@ -229,7 +229,7 @@ bot.commands = new Discord.Collection();
 
   if (msg.startsWith (prefix + "cards")) {
     let urembed = new Discord.RichEmbed()
-      .setDescription("Command: g!cardname")
+      .setDescription("Command: 8!cardname")
       .setColor("#a0a0a0")
       .addField("SSRs:", "12 Songs Gift\nBirthday Photobook\nCyber Techno | alt: vae\nEnd of Year Live\nGrand Extermination Operation + Secret\nLast Dimension\nLight Future\nMonster\nOrdinary Days\nRabbit Ears Parka\nShiawase de ite\nSweets\nTea Party\nTrigger Police\nValentine Great Escape | alt: vge\nWinter Wonderland Trip\nWhite Day\nWork\nXmas Rock",true)
       .addField("SSRs:", "Ainana Roman\nChristmas\nDaybreak Interlude\nGothic Halloween\nHoliday Gift Collection\nLeopard Eyes | alt: leopa\nMATSURI\nNew Year\nPhotogenic Life\nRoad to Infinity\nSwaying on the Manami Railway | alt: bno\nTaiko no Tatsujin | alt: taiko\nTrigger Academy\nValentine\nValentine Live\nWhite Special Day | alt: white sp\nWishes\nXmas Magic\nZodiac",true)
