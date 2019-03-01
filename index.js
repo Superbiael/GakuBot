@@ -1,37 +1,18 @@
-// const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
-const fs = require("fs");
+const prefix = "8!";
 bot.commands = new Discord.Collection();
-const prefix = "g!";
 
-fs.readdir("./commands/", (err, files) => {
-
-  if(err) console.log(err);
-
-  let jsfile = files.filter(f => f.split(".").pop() === "js")
-  if(jsfile.legnth <= 0){
-    console.log("Couldn't find commands.");
-    return;
-  }
-
-  jsfile.forEach((f, i) =>{
-    let props = require(`./commands/${f}`);
-    console.log(`${f} loaded!`);
-    bot.commands.set(props.help.name, props);
+   bot.on("ready", async () => {
+   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+   // bot.user.setActivity("Associate", {type:"LISTENING"});
+    bot.user.setActivity("三日月のヴェール | 8!help", {type:"LISTENING"});
   });
-
-});
-
-bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("三日月のヴェール", {type:"LISTENING"});
-});
 
    bot.on("message", async message => {
     // if (message.author.bot) return;
     if(message.channel.type === "dm") return;
-    let prefix = 'g!';
+    let prefix = '8!';
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
@@ -43,7 +24,6 @@ bot.on("ready", async () => {
 
     // Redirect to specific channel
     // let botschannel = message.guild.channels.find(channel => channel.name === 'bot-channel');
-    // // let botschannel = message.guild.channels.find(channel => channel.name === 'test');
     // if(!botschannel) return;
 
     if (msg.startsWith (prefix + "send")) {
@@ -91,6 +71,31 @@ bot.on("ready", async () => {
        }
      }
 
+     if(msg.startsWith (prefix + "ask")) {
+          if(!args[0]) return message.reply("oof");
+          "Yes... no... looks like I said too much (lol).",
+           "That's the way it should be (lol)",
+           "Of course. Who do you think I am?",
+           "That won't be necessary.",
+           "Hm... wait a second, you shouldn't be asking me about this!",
+           "Wouldn't it be better if you decided on your own (lol).",
+           "Hell no!",
+           "Huh... What's with that (lol)",
+           "Huh? leave it to me.",
+           "No, don't be ridiculous.",
+           "That's right (lol).",
+           "My answer is \nIt's a secret.",
+           "Don't.",
+          let result = Math.floor((Math.random() * replies.length));
+          let question = args.slice(0).join(" ");
+
+          let ballembed = new Discord.RichEmbed()
+           .setColor("#a0a0a0")
+           .addField("Question:", question)
+           .addField("Answer:", replies[result]);
+          return message.channel.send(ballembed);
+        }
+
     if(cmd === `${prefix}cat`){
        return message.channel.send ({files:["./images/nya.png"]});
      }
@@ -123,7 +128,7 @@ bot.on("ready", async () => {
   }
 
   if (msg.startsWith ("rich people do not interact")) {
-  return message.channel.send("I'll pay you $100 if you let me interact.");
+  return message.channel.send("I'll pay you 1 million yen if you let me interact.");
 }
 
     if (msg.startsWith ("i love you gaku")) {
@@ -135,6 +140,7 @@ bot.on("ready", async () => {
           case 3: message.channel.send ("Hold up.\nIt's not fair if you suddenly come out and say something like that...\nI don't think my heart can handle this..."); break;
           case 4: message.channel.send ("This feels...\nkind of embarrassing..."); break;
           case 5: message.channel.send ("Thanks, let's spend another awesome year together. I promise to take you to even greater heights. Just keep on following me!"); break;
+          case 6: message.channel.send ("I'm the one who should be saying that to you."); break;
         }
       }
 
@@ -235,8 +241,6 @@ bot.on("ready", async () => {
 
 bot.on("message", function(message) {
     msg = message.content.toLowerCase();
-    // let botschannel = message.guild.channels.find(channel => channel.name === 'bot-channel');
-    // if(!botschannel) return;
     if(!msg.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split();
 
@@ -451,6 +455,4 @@ bot.on("message", function(message) {
     }
 });
 
-
-// bot.login(botconfig.token);
 bot.login(process.env.token);
