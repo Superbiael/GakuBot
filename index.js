@@ -86,6 +86,7 @@ bot.commands = new Discord.Collection();
            "That's right (lol).",
            "My answer is \nIt's a secret.",
            "Don't.",
+           ];
           let result = Math.floor((Math.random() * replies.length));
           let question = args.slice(0).join(" ");
 
