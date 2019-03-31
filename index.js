@@ -1,3 +1,4 @@
+// const botconfig = require("./botconfig.json"); // Delete this when transfering to Github
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const prefix = "g!";
@@ -5,8 +6,8 @@ bot.commands = new Discord.Collection();
 
    bot.on("ready", async () => {
    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-   bot.user.setActivity("Associate | 8!help", {type:"LISTENING"});
-//     bot.user.setActivity("三日月のヴェール | g!help", {type:"LISTENING"});
+   bot.user.setActivity("Associate | g!help", {type:"LISTENING"});
+    // bot.user.setActivity("三日月のヴェール | 8!help", {type:"LISTENING"});
   });
 
    bot.on("message", async message => {
@@ -22,9 +23,6 @@ bot.commands = new Discord.Collection();
     msg = message.content.toLowerCase();
     mention = message.mentions.users.first();
 
-    // Redirect to specific channel
-    // let botschannel = message.guild.channels.find(channel => channel.name === 'bot-channel');
-    // if(!botschannel) return;
 
     if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
@@ -68,31 +66,31 @@ bot.commands = new Discord.Collection();
           case 23: message.channel.send ("I want to eat noodles when they're at their best.\nThat's why I wnat to cook them right down to the exact second. The real battle begins when the kitchen timer rings.\nI immediately have to power out the boiling water, add the broth, and finish it up with toppings. Even a couple of extra hands aren't enough to do that."); break;
           case 24: message.channel.send ("When we debuted, I was more focused on keeping my old man satisfied than I was on enjoying my work.\nBut while standing on stage, spending time with my friends and fans, I learned to have fun doing it too. Now it's something I can't live without. It's the best job ever, one that really lets me feel like myself."); break;
           case 25: message.channel.send ("I'll never quit TRIGGER, or being an idol. No matter who tells me to. \nI want to keep trying until I'm at my limit, no, even past my limits.\nWith this life, and with TRIGGER."); break;
+          case 27: message.channel.send ("I like soba. ...Is that surprising?"); break;
+          case 28: message.channel.send (""); break;
        }
      }
 
      if(msg.startsWith (prefix + "ask")) {
-            if(!args[0]) return message.reply("Did you say something?");
-            let replies = [
-           "Yes... no... looks like I said too much (lol).",
-            "That's the way it should be (lol)",
-            "Of course. Who do you think I am?",
-            "That won't be necessary.",
-            "Hm... wait a second, you shouldn't be asking me about this!",
-            "Wouldn't it be better if you decided on your own (lol).",
-            "Hell no!",
-            "Huh... What's with that (lol)",
-            "Huh? leave it to me.",
-            "No, don't be ridiculous.",
-            "That's right (lol).",
-            "My answer is \nIt's a secret.",
-            "Don't.",
-           ];
+          if(!args[0]) return message.reply("oof");
+          "Yes... no... looks like I said too much (lol).",
+           "That's the way it should be (lol)",
+           "Of course. Who do you think I am?",
+           "That won't be necessary.",
+           "Hm... wait a second, you shouldn't be asking me about this!",
+           "Wouldn't it be better if you decided on your own (lol).",
+           "Hell no!",
+           "Huh... What's with that (lol)",
+           "Huh? leave it to me.",
+           "No, don't be ridiculous.",
+           "That's right (lol).",
+           "My answer is \nIt's a secret.",
+           "Don't.",
           let result = Math.floor((Math.random() * replies.length));
           let question = args.slice(0).join(" ");
 
           let ballembed = new Discord.RichEmbed()
-           .setColor("#a0a0a0")
+           .setColor("#f0930e")
            .addField("Question:", question)
            .addField("Answer:", replies[result]);
           return message.channel.send(ballembed);
@@ -134,7 +132,7 @@ bot.commands = new Discord.Collection();
 }
 
     if (msg.startsWith ("i love you gaku")) {
-        number = 5;
+        number = 6;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: message.channel.send ("I love you too. I really mean it, I wouldn't say it to anyone else."); break;
@@ -168,8 +166,13 @@ bot.commands = new Discord.Collection();
   }
 
     if (msg.startsWith ("good morning gaku")) {
-      return message.channel.send("Good morning. You were talking in your sleep, weren't you?");
+      number = 2;
+      var random = Math.floor (Math.random() * (number)) + 1;
+      switch (random) {
+        case 1: message.channel.send ("Good morning. You were talking in your sleep, weren't you?"); break;
+        case 2: message.channel.send ("I'm still sleepy..."); break;
   }
+}
 
     if (msg.startsWith ("good night gaku")) {
       return message.channel.send("Good night. From now on, I want you to think of me.");
@@ -188,7 +191,7 @@ bot.commands = new Discord.Collection();
       .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
       .setColor("#a0a0a0")
       .addField("Commands:","**8!ask** *<question>* | Ask him anything. \n**8!send** *<@user> <message>* | Send a DM to the mentioned user\n**8!scout** | Solo Yolo \n**8!quote** | Random quote\n**8!say** *<message>* | Have the bot say anything you want\n**8!cards** | List of cards ")
-      .addField("Basic g!commands:", "mafia (alias:maf) | sobaman | dab | bathbomb | cat | cowboy")
+      .addField("Basic 8!commands:", "mafia (alias:maf) | sobaman | dab | bathbomb | cat | cowboy")
       .addField("Other commands:", "I love you Gaku  | I hate you Gaku | Udon | Good morning Gaku | Good night Gaku | Hey gays | Gaku do not interact | Hey Hetero")
     return message.channel.send(helpembed);
 }
@@ -233,7 +236,7 @@ bot.commands = new Discord.Collection();
       .setColor("#a0a0a0")
       .addField("SSRs:", "12 Songs Gift\nBirthday Photobook\nCyber Techno | alt: vae\nEnd of Year Live\nGrand Extermination Operation + Secret\nLast Dimension\nLight Future\nMonster\nOrdinary Days\nRabbit Ears Parka\nShiawase de ite\nSweets\nTea Party\nTrigger Police\nValentine Great Escape | alt: vge\nWinter Wonderland Trip\nWhite Day\nWork\nXmas Rock",true)
       .addField("SSRs:", "Ainana Roman\nChristmas\nDaybreak Interlude\nGothic Halloween\nHoliday Gift Collection\nLeopard Eyes | alt: leopa\nMATSURI\nNew Year\nPhotogenic Life\nRoad to Infinity\nSwaying on the Manami Railway | alt: bno\nTaiko no Tatsujin | alt: taiko\nTrigger Academy\nValentine\nValentine Live\nWhite Special Day | alt: white sp\nWishes\nXmas Magic\nZodiac",true)
-      .addField("Ichiban Kuji:", "Black Side\nCelestial Pilgrimage | alt: hoshi\nHappy Sparkle Star | alt: sparkle\nKing Pudding\nMarchen Dream\nOrder Please",true)
+      .addField("Ichiban Kuji:", "Black Side\nCelestial Pilgrimage | alt: hoshi\nHappy Sparkle Star | alt: sparkle\nKing Pudding\nMarchen Dream\nOrder Please\nWonderland in the Dark | alt: wonderland",true)
       .addField("URs:", "Happy New Year\nHeavenly Visitor\nMusic in your Thoughts | alt: walker\nOutdoor Live\n Middle of Rehearsal",true)
       .addField("Others:", "Shuffle Talk \nShuffle Talk 2018 \n",true);
     return message.channel.send(urembed);
@@ -295,6 +298,10 @@ bot.on("message", function(message) {
       case "happy sparkle star":
       case "sparkle":
         return message.channel.send ({files:['./images/borderless/ichiban/sparkle.png']});
+      break;
+      case "wonderland in the dark":
+      case "wonderland":
+        return message.channel.send ({files:['./images/borderless/ichiban/wonderland_in_the_dark.png']});
       break;
 // Other cards
       case "shuffle talk":
@@ -457,4 +464,6 @@ bot.on("message", function(message) {
     }
 });
 
+
+// bot.login(botconfig.token);  // Delete this for Github + Use the line below instead
 bot.login(process.env.token);
