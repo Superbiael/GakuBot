@@ -1,18 +1,18 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
-const prefix = "8!";
+const prefix = "g!";
 bot.commands = new Discord.Collection();
 
    bot.on("ready", async () => {
    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
    bot.user.setActivity("Associate | 8!help", {type:"LISTENING"});
-//     bot.user.setActivity("三日月のヴェール | 8!help", {type:"LISTENING"});
+//     bot.user.setActivity("三日月のヴェール | g!help", {type:"LISTENING"});
   });
 
    bot.on("message", async message => {
     // if (message.author.bot) return;
     if(message.channel.type === "dm") return;
-    let prefix = '8!';
+    let prefix = 'g!';
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
@@ -34,7 +34,7 @@ bot.commands = new Discord.Collection();
       }
 
     if (msg.startsWith (prefix + "scout")) {
-          number = 74;
+          number = 75;
           imageNumber = Math.floor (Math.random() * (number)) + 1;
           return message.channel.send ({files: ["./scout/" + imageNumber + ".png"]})
         }
