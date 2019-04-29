@@ -34,7 +34,7 @@ bot.commands = new Discord.Collection();
       }
 
     if (msg.startsWith (prefix + "scout")) {
-          number = 75;
+          number = 76;
           imageNumber = Math.floor (Math.random() * (number)) + 1;
           return message.channel.send ({files: ["./scout/" + imageNumber + ".png"]})
         }
@@ -231,7 +231,7 @@ bot.commands = new Discord.Collection();
     let urembed = new Discord.RichEmbed()
       .setDescription("Command: 8!cardname")
       .setColor("#a0a0a0")
-      .addField("SSRs:", "12 Songs Gift\nBirthday Photobook\nCyber Techno | alt: vae\nEnd of Year Live\nGrand Extermination Operation + Secret\nLast Dimension\nLight Future\nMonster\nOrdinary Days\nRabbit Ears Parka\nShiawase de ite\nSweets\nTea Party\nTrigger Police\nValentine Great Escape | alt: vge\nWinter Wonderland Trip\nWhite Day\nWork\nXmas Rock",true)
+      .addField("SSRs:", "12 Songs Gift\nA Bouquet for You | alt: dhc\nBirthday Photobook\nCyber Techno | alt: vae\nEnd of Year Live\nGrand Extermination Operation + Secret\nLast Dimension\nLight Future\nMonster\nOrdinary Days\nRabbit Ears Parka\nShiawase de ite\nSweets\nTea Party\nTrigger Police\nValentine Great Escape | alt: vge\nWinter Wonderland Trip\nWhite Day\nWork\nXmas Rock",true)
       .addField("SSRs:", "Ainana Roman\nChristmas\nDaybreak Interlude\nGothic Halloween\nHoliday Gift Collection\nLeopard Eyes | alt: leopa\nMATSURI\nNew Year\nPhotogenic Life\nRoad to Infinity\nSwaying on the Manami Railway | alt: bno\nTaiko no Tatsujin | alt: taiko\nTrigger Academy\nValentine\nValentine Live\nWhite Special Day | alt: white sp\nWishes\nXmas Magic\nZodiac",true)
       .addField("Ichiban Kuji:", "Black Side\nCelestial Pilgrimage | alt: hoshi\nHappy Sparkle Star | alt: sparkle\nKing Pudding\nMarchen Dream\nOrder Please\nWonderland in the Dark | alt: wonderland",true)
       .addField("URs:", "Happy New Year\nHeavenly Visitor\nMusic in your Thoughts | alt: walker\nOutdoor Live\n Middle of Rehearsal",true)
@@ -310,6 +310,10 @@ bot.on("message", function(message) {
         return message.channel.send ({files:['./images/borderless/others/shuffle_18.png']});
       break;
       // SSR Cards
+      case "a Bouquet for you":
+      case "dhc":
+        return message.channel.send ({files:["./images/borderless/ssr/dhc.png"]});
+        break;
       case "connected feelings":
       case "connected":
         return message.channel.send ({files:['./images/borderless/ssr/connected.png']});
