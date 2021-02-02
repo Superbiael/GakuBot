@@ -188,7 +188,7 @@ bot.commands = new Discord.Collection();
       .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
       .setColor("#a0a0a0")
       .addField("Commands:","**8!ask** *<question>* | Ask him anything. \n**8!send** *<@user> <message>* | Send a DM to the mentioned user\n**8!scout** | Solo Yolo \n**8!quote** | Random quote\n**8!say** *<message>* | Have the bot say anything you want\n**8!cards** | List of cards ")
-      .addField("Basic g!commands:", "mafia (alias:maf) | sobaman | dab | bathbomb | cat | cowboy")
+      .addField("Basic 8!commands:", "mafia (alias:maf) | sobaman | dab | bathbomb | cat | cowboy")
       .addField("Other commands:", "I love you Gaku  | I hate you Gaku | Udon | Good morning Gaku | Good night Gaku | Hey gays | Gaku do not interact | Hey Hetero")
     return message.channel.send(helpembed);
 }
