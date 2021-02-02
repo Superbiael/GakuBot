@@ -5,8 +5,8 @@ bot.commands = new Discord.Collection();
 
    bot.on("ready", async () => {
    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-   bot.user.setActivity("Associate | 8!help", {type:"LISTENING"});
-//     bot.user.setActivity("三日月のヴェール | 8!help", {type:"LISTENING"});
+//    bot.user.setActivity("Associate | 8!help", {type:"LISTENING"});
+    bot.user.setActivity("Mikazuki no Veil | 8!help", {type:"LISTENING"});
   });
 
    bot.on("message", async message => {
