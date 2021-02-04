@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
+const fs = require("fs");
 const prefix = "8!";
 bot.commands = new Discord.Collection();
 
    bot.on("ready", async () => {
    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-//    bot.user.setActivity("Associate | 8!help", {type:"LISTENING"});
     bot.user.setActivity("Mikazuki no Veil | 8!help", {type:"LISTENING"});
   });
 
@@ -183,7 +183,7 @@ bot.commands = new Discord.Collection();
       return message.channel.send("What about me?");
   }
 
-    if(cmd ===`${prefix}help`){
+   if(cmd ===`${prefix}help`){
       let helpembed = new Discord.RichEmbed()
       .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
       .setColor("#a0a0a0")
